@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Legacy | FORGE Robotics</title>
+  <link rel="stylesheet" href="ataaStyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+      color: #2c2c2c;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding-bottom: 0.5rem;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 60px;
+    }
+    .banner {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #ff4a4a;
+    }
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #b33951;
+      margin-top: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    a {
+      color: #b33951;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      color: #bbb;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="https://codehs.com/uploads/629bde257bd433c68949ed8eb5eebe72" alt="ATAA Logo" class="logo">
+      <div class="banner">Legacy of ATAA Robotics</div>
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-content">
+            <a href="mission.html">Our Mission</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html" class="active">Legacy</a>
+             <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="content">
+    <p><strong>We are Team 4334, Alberta Tech Alliance (ATA)</strong>, an FRC robotics team based in Calgary, Alberta, Canada.</p>
+    <p>We strive to actively improve ourselves and others by spreading FIRST Robotics ideals and values, both in and out of competition.</p>
+    <p>ATA started with one student — Alex Rodrigues — and in 2012, they made history as a rookie team reaching Einstein at the World Championship.</p>
+
+    <h2>Historical Highlights</h2>
+    <ul>
+      <li><strong>2012:</strong> World Championship Finalists with 1114 and 2056 – the legendary "Eh Team"</li>
+      <li><strong>2013–2016:</strong> Multiple regional wins, technical awards, and IRI Champion</li>
+      <li><strong>2017–2019:</strong> Consistent World Championship qualifiers, engineering awards</li>
+      <li><strong>2020:</strong> Season shortened by COVID, but took home Judges' Award</li>
+    </ul>
+
+    <p>Visit our original site: <a href="https://www.4334.ca/" target="_blank">www.4334.ca</a></p>
+
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://codehs.com/uploads/e53ae46597cce6547ca55e7a3c3c3ccd" alt="2012 Einstein Run">
+      <img src="https://via.placeholder.com/400x250?text=Regional+Win+2015" alt="Regional Win 2015">
+      <img src="https://via.placeholder.com/400x250?text=ATA+Drive+Team" alt="Drive Team">
+      <img src="https://via.placeholder.com/400x250?text=Robot+Showcase" alt="Robot Showcase">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
+    <p>Payment Email for Donations: payment@ataarobotics.ca</p>
+  </footer>
+
+</body>
+</html>
