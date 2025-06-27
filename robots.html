@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORGE 4421 – Our Robots</title>
+  <link rel="stylesheet" href="ataaStyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    .robots-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 2rem;
+    }
+
+    .robot-flip-card {
+      width: 320px;
+      height: 580px;
+      perspective: 1200px;
+    }
+
+    .robot-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .robot-flip-card:hover .robot-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .robot-flip-front,
+    .robot-flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .robot-flip-front {
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .robot-flip-front img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .robot-front-labels {
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .robot-name {
+      font-size: 22px;
+      font-family: 'Orbitron', sans-serif;
+      color: #ff4a4a;
+    }
+
+    .robot-year {
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .robot-flip-back {
+      background-color: #1c1c1c;
+      color: #fff;
+      transform: rotateY(180deg);
+      padding: 20px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .robot-desc {
+      line-height: 1.5;
+      flex-grow: 1;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      margin-bottom: 10px;
+    }
+
+    .robot-desc strong {
+      display: block;
+      margin-top: 10px;
+      color: #ff4a4a;
+    }
+
+    .robot-links a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .robot-links a:hover {
+      background-color: #0056b3;
+    }
+
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+    }
+
+    header .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .banner {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #ff4a4a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      color: #bbb;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" class="logo">
+      <div class="banner">FORGE 4421 – Our Robots</div>
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-content">
+            <a href="mission.html">Our Mission</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html" class="active">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+             <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="robots-page">
+    <h2 style="text-align: center; margin: 2rem 0;">Meet Our Robots</h2>
+    <div class="robots-container">
+
+      <!-- LOKI -->
+      <div class="robot-flip-card">
+        <div class="robot-flip-inner">
+          <div class="robot-flip-front">
+            <img src="https://codehs.com/uploads/f16912333fe65d4345e0a935c2f0f134" alt="LOKI 2025" />
+            <div class="robot-front-labels">
+              <div class="robot-name">LOKI</div>
+              <div class="robot-year">2024–2025</div>
+            </div>
+          </div>
+          <div class="robot-flip-back">
+            <div class="robot-desc">
+<strong>Game:</strong> Reefscape — stacking pipes on a coral reef-like structure, scoring kickballs into a net, and climbing a cage in endgame.
+
+<strong>Key Features:</strong>
+- Custom-built elevator allowing all reef-level, processor, and net scoring.
+- Pivot arm for algae manipulation and rapid scoring at all angles.
+- Consistent climber enabling RP scoring and endgame bonus points.
+
+<strong>Awards:</strong>
+- Gracious Professionalism Award at Canpac.
+- Team Spirit Award at Las Vegas.
+- Vegas semifinalist.
+- Qualified for Worlds, placed 35th in division.
+- Ranked top 30 in Canada.
+
+<strong>Fun Fact:</strong> Named Loki due to an early algae scoring mechanism resembling Loki’s horns. Rebuilt mid-season by removing an elevator stage and adding a pivot to improve scoring speed and flexibility.
+            </div>
+            <div class="robot-links">
+              <a href="https://www.thebluealliance.com/team/4421/2025" target="_blank" rel="noopener noreferrer">Blue Alliance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sir William -->
+      <div class="robot-flip-card">
+        <div class="robot-flip-inner">
+          <div class="robot-flip-front">
+            <img src="https://codehs.com/uploads/2697e38b96816623257d9bae9910a702" alt="Sir William 2024" />
+            <div class="robot-front-labels">
+              <div class="robot-name">Sir William</div>
+              <div class="robot-year">2023–2024</div>
+            </div>
+          </div>
+          <div class="robot-flip-back">
+            <div class="robot-desc">
+<strong>Game:</strong> Crescendo — shooting orange tori into a structure and climbing onto a chain in endgame.
+
+<strong>Key Features:</strong>
+- Linear actuators for consistent pivot and climb, enabling scoring from variable distances.
+- Carbon fiber rollers for efficient ground intake.
+- Odometry combined with Limelight vision for auto-aligning with the scoring target.
+
+<strong>Awards:</strong>
+- Quality Award at Canpac.
+- Canpac Finalist.
+- Innovation in Control Award at Las Vegas.
+- Top 10% robot worldwide by EPA, top 20 in Canada.
+
+<strong>Fun Fact:</strong> Nicknamed "Big Willy" after a team member’s grandfather who donated generously. One of only two teams worldwide using REV linear actuators this year. Considered the best robot ATAA has made so far.
+            </div>
+            <div class="robot-links">
+              <a href="https://www.thebluealliance.com/team/4421/2024" target="_blank" rel="noopener noreferrer">Blue Alliance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Xcalibur -->
+      <div class="robot-flip-card">
+        <div class="robot-flip-inner">
+          <div class="robot-flip-front">
+            <img src="https://codehs.com/uploads/9402aa477880d416b5f0eb0c6ee9f443" alt="Xcalibur 2023" />
+            <div class="robot-front-labels">
+              <div class="robot-name">Xcalibur</div>
+              <div class="robot-year">2022–2023</div>
+            </div>
+          </div>
+          <div class="robot-flip-back">
+            <div class="robot-desc">
+<strong>Game:</strong> Charged Up — stacking cubes and pylons on shelves and balancing on the charging station.
+
+<strong>Key Features:</strong>
+- Solid 1/8" aluminum bellypan to lower the center of mass.
+- Custom-built 2-stage arm for reliable scoring.
+- Auto-balancing for endgame stability.
+
+<strong>Awards:</strong>
+- Placed 5th in Canpac qualifications.
+
+<strong>Fun Fact:</strong> Named Xcalibur for its X-like frame structure. Despite its name, it was "kind of an awful robot" but important for team growth.
+            </div>
+            <div class="robot-links">
+              <a href="https://www.thebluealliance.com/team/4421/2023" target="_blank" rel="noopener noreferrer">Blue Alliance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doug -->
+      <div class="robot-flip-card">
+        <div class="robot-flip-inner">
+          <div class="robot-flip-front">
+            <img src="https://codehs.com/uploads/645e4b1d80d6e0f20bb2ec256deaa2ec" alt="Doug 2021" />
+            <div class="robot-front-labels">
+              <div class="robot-name">Doug</div>
+              <div class="robot-year">2021–2022</div>
+            </div>
+          </div>
+          <div class="robot-flip-back">
+            <div class="robot-desc">
+<strong>Game:</strong> Rapid React — shooting balls and climbing.
+
+<strong>Key Features:</strong>
+- 4 STS non-inverted swerve drive with Falcon motors.
+- Climb to all 4 levels.
+- 3-ball hopper capacity.
+- Single motor shooter.
+- Used LIDAR sensors for positioning and control.
+
+<strong>Awards:</strong>
+- Innovation in Control award.
+- Competed at FIRST Worlds (see Blue Alliance for details).
+
+<strong>Fun Fact:</strong> "No fun, all business" robot. Now retired and serves as a swerve drive chassis for training/testing.
+            </div>
+            <div class="robot-links">
+              <a href="https://www.thebluealliance.com/team/4421/2022" target="_blank" rel="noopener noreferrer">Blue Alliance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
+    <p>Payment Email for Donations: payment@ataarobotics.ca</p>
+  </footer>
+</body>
+</html>
