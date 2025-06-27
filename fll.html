@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATAA Robotics – FLL Teams</title>
+  <link rel="stylesheet" href="ataaStyles.css" />
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      padding: 1rem;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #ff4a4a;
+    }
+
+    nav.fll-nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      border-bottom: 3px solid #ff4a4a;
+    }
+
+    nav.fll-nav button {
+      background: none;
+      border: none;
+      color: #ccc;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav.fll-nav button:hover,
+    nav.fll-nav button.active {
+      background-color: #ff4a4a;
+      color: #000;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #111;
+      border-radius: 12px;
+    }
+
+    section.team-info {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      min-height: 200px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav.fll-nav {
+        flex-direction: column;
+      }
+      nav.fll-nav button {
+        width: 100%;
+        padding: 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>ATAA Robotics – FIRST LEGO League (FLL) Teams</header>
+
+ <nav class="teams-bar">
+  <div class="nav-links">
+    <div class="dropdown">
+      <a href="index.html">Home</a>
+      <div class="dropdown-content">
+        <a href="mission.html">Our Mission</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#frc">FRC - FORGE 4421</a>
+      <div class="dropdown-content">
+        <a href="team.html">About</a>
+        <a href="robots.html">Robots</a>
+        <a href="awards.html">Awards</a>
+        <a href="legacy.html">Legacy</a>
+        <a href="media.html">Media</a> 
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#ftc">FTC Teams</a>
+      <div class="dropdown-content">
+        <a href="hyperdroid.html">HyperDroid #10015</a>
+        <a href="cai.html">Crazy AI #16596</a>
+        <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+        <a href="techtitans.html">Tech Titans #23684</a>
+      </div>
+    </div>
+
+    <a href="fll.html" class="active">FLL Teams</a>
+    <a href="event.html">Events</a>
+    <a href="impact.html">Impact</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+
+  <main>
+    <section id="duckies" class="team-info" role="tabpanel" aria-labelledby="duckies-btn">
+      <h2>Fire Breathing Rubber Duckies #13487</h2>
+      <p><em><!-- Fill in team info here. Example: Team background, notable achievements, coach, number of members, season highlights, etc. --></em></p>
+    </section>
+
+    <section id="bobbots" class="team-info" role="tabpanel" aria-labelledby="bobbots-btn" hidden>
+      <h2>BOB Bots #58560</h2>
+      <p><em><!-- Fill in team info here. Example: Team background, notable achievements, coach, number of members, season highlights, etc. --></em></p>
+    </section>
+
+    <section id="creators" class="team-info" role="tabpanel" aria-labelledby="creators-btn" hidden>
+      <h2>The Creators #62273</h2>
+      <p><em><!-- Fill in team info here. Example: Team background, notable achievements, coach, number of members, season highlights, etc. --></em></p>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <p>The Alberta Tech Alliance Association also operates 3 FIRST Lego League teams for younger students in elementary school. The teams are Fire Breathing Rubber Duckies #13487, BOB Bots #58560 and The Creators #62273. Played using LEGO Spike Prime robot kits on a table-top playing field, FLL is the most accessible of the FIRST robotics programs.</p>
+
+      <p>In the 2024 season, our FLL teams received many awards such as the Core Values Award, Coach of the Year and the Southern Alberta Inspire Award.</p>
+
+      <p>They also made it to the Southern Alberta Championships and the Alberta Provincial Championships.</p>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('nav.fll-nav button');
+    const panels = document.querySelectorAll('main section.team-info');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active/aria-selected from all buttons
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+        // Hide all panels
+        panels.forEach(panel => panel.hidden = true);
+
+        // Activate clicked button
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+        // Show associated panel
+        const panelId = button.getAttribute('aria-controls');
+        document.getElementById(panelId).hidden = false;
+      });
+    });
+  </script>
+</body>
+</html>
