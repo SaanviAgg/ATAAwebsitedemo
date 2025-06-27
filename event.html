@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATAA Events Countdown</title>
+  <link rel="stylesheet" href="ataaStyles.css">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+    .countdown-section {
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1c1c1c;
+      border: 2px solid #ff4a4a;
+      border-radius: 15px;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(255, 74, 74, 0.3);
+    }
+    h2 {
+      font-size: 2rem;
+      color: #ff4a4a;
+      margin-bottom: 20px;
+    }
+    .timer {
+      font-size: 1.5rem;
+      color: #eee;
+    }
+
+    /* Nav bar dropdown styles */
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+      color: white;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+      color: white;
+      white-space: nowrap;
+    }
+    .dropdown-content a:hover {
+      background-color: #ff4a4a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <img src="/assets/images/forge-logo.png" alt="FORGE Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">
+      ATAA – Event Countdown Clocks
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-content">
+            <a href="mission.html">Our Mission</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+             <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html" class="active">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="countdown-section">
+      <h2>FLL Kickoff</h2>
+      <div id="fll-timer" class="timer"></div>
+    </div>
+
+    <div class="countdown-section">
+      <h2>FTC Kickoff</h2>
+      <div id="ftc-timer" class="timer"></div>
+    </div>
+
+    <div class="countdown-section">
+      <h2>FRC Kickoff</h2>
+      <div id="frc-timer" class="timer"></div>
+    </div>
+
+    <div class="countdown-section">
+      <h2>FIRST Championship</h2>
+      <div id="first-timer" class="timer"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
+    <p>Payment Email for Donations: payment@ataarobotics.ca</p>
+  </footer>
+
+  <script>
+    function startCountdown(id, dateStr) {
+      const timerEl = document.getElementById(id);
+      const targetDate = new Date(dateStr).getTime();
+      const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          clearInterval(interval);
+          timerEl.innerText = "🎉 It's time! 🎉";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        timerEl.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }, 1000);
+    }
+
+    // Update these dates with the actual kickoff times
+    startCountdown("fll-timer", "2025-08-01T09:00:00");
+    startCountdown("ftc-timer", "2025-09-07T10:00:00");
+    startCountdown("frc-timer", "2026-01-04T10:00:00");
+    startCountdown("first-timer", "2026-04-15T09:00:00");
+  </script>
+</body>
+</html>
