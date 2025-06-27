@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us – ATAA Robotics</title>
+  <link rel="stylesheet" href="ataaStyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #ff4a4a;
+    }
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+      color: white;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+      color: white;
+      white-space: nowrap;
+    }
+    .dropdown-content a:hover {
+      background-color: #ff4a4a;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #ff4a4a;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .about-section {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 74, 74, 0.15);
+    }
+
+    .about-section p {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .goals-list {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #ff4a4a;
+    }
+
+    .video-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      margin-bottom: 1rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #ff4a4a;
+    }
+
+    .video-section video {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 74, 74, 0.25);
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" style="height: 40px;">
+      ATAA Robotics – About Us
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-content">
+            <a href="mission.html">Our Mission</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html" class="active">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+             <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>ATAA Mission & Vision</h2>
+    <div class="about-section">
+      <p><strong>Mission Statement:</strong> Growing Alberta’s innovators of tomorrow through our competitive FIRST Robotics teams and giving back to our community by supporting expansion and sustainability of FIRST Robotics in Calgary and Alberta.</p>
+
+      <p><strong>Vision:</strong> ATAA is on a mission to build a STEM community, forging a network of relationships between students, mentors, volunteers, sponsors, and all Calgary teams. We envision a future where Calgary, Alberta is recognized for STEM and robotics, weaving capability, teamwork, and innovation into the fabric of our inclusive community.</p>
+
+      <p><strong>ATAA Goals:</strong></p>
+      <div class="goals-list">
+        <p>Our goal is to be known for high performing teams that consistently qualify for finals at the competitions we attend while always striving to qualify for World Championships.</p>
+        <p>With the knowledge, experience and fundraising that we gain from these competitions, we will expand the reach of STEM by helping others start, run, and manage their FIRST Robotics teams.</p>
+      </div>
+    </div>
+
+    <section class="video-section">
+      <h2>THIS IS FORGE</h2>
+      <video controls>
+        <source src="/assets/videos/ataa-intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
+    <p>Payment Email for Donations: payment@ataarobotics.ca</p>
+  </footer>
+</body>
+</html>
