@@ -1,0 +1,439 @@
+/* --- Base Styles --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #eee;
+}
+
+/* --- Header --- */
+header {
+  background-color: #111;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.banner {
+  font-size: 2.2rem;
+  color: #ff4a4a;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --- Navigation Bar --- */
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a,
+.dropdown > a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+nav a:hover,
+.dropdown > a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* --- Dropdown --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 999;
+  border-radius: 4px;
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- Responsive Nav Fix --- */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    min-width: 100%;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/* --- Main Content --- */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+section {
+  background: #1c1c1c;
+  padding: 1.5rem;
+  border-left: 6px solid #ff4a4a;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+/* --- Typography --- */
+h2, h3 {
+  color: #ff4a4a;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- Video --- */
+video {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* --- CTA Buttons --- */
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 2rem 0;
+}
+
+.call-to-action a {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.call-to-action a:hover {
+  background: #444;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #ff4a4a;
+}
+
+/* Remaining styles unchanged */
+
+/* --- Awards Section --- */
+/* --- Base Styles --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #eee;
+}
+
+/* --- Header --- */
+header {
+  background-color: #111;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.banner {
+  font-size: 2.2rem;
+  color: #ff4a4a;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --- Navigation Bar --- */
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+nav a,
+.dropdown > a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+nav a:hover,
+.dropdown > a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* --- Main Content --- */
+.awards-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.awards-container h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 36px;
+  color: #ff4a4a;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.awards-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 40px;
+}
+
+/* ✨ Award Card Styling */
+.awards-container li {
+  background-color: #1a1a1a;
+  border: 1.5px solid rgba(255, 74, 74, 0.4);
+  border-radius: 16px;
+  padding: 30px 35px;
+  box-shadow: 
+    0 0 20px rgba(255, 74, 74, 0.15),
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 8px rgba(255, 74, 74, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.awards-container li:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 0 25px rgba(255, 74, 74, 0.4),
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 12px rgba(255, 74, 74, 0.1);
+}
+
+.awards-container li h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #ff4a4a;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.awards-container li p {
+  margin: 10px 0;
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #ff4a4a;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .awards-container h2 {
+    font-size: 28px;
+  }
+
+  .awards-container li h3 {
+    font-size: 20px;
+  }
+}
+
+/* --- Legacy Section --- */
+.legacy-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.legacy-container h2 {
+  font-size: 2.4rem;
+  color: #ff4a4a;
+  margin-bottom: 20px;
+}
+
+.legacy-container a {
+  color: #6dcff6;
+  text-decoration: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Robots Page --- */
+.robots-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.robots-page h2 {
+  font-size: 42px;
+  color: #ff4a4a;
+  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Card Grid */
+.robots-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Each Robot Card */
+.robot-card {
+  background: radial-gradient(circle at top left, #1e1e1e, #0a0a0a);
+  border: 3px solid #ff4a4a;
+  border-radius: 20px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(255, 74, 74, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.robot-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 74, 74, 0.5);
+}
+
+/* Robot Image */
+.robot-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ff4a4a;
+}
+
+/* Info Section */
+.robot-info {
+  padding: 20px;
+  text-align: left;
+  color: #f3f3f3;
+}
+
+.robot-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff4a4a;
+  margin-bottom: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.robot-year {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.robot-desc {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.robot-links a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 6px 12px;
+  background-color: #ff4a4a;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.robot-links a:hover {
+  background-color: #e33a3a;
+}
