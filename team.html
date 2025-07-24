@@ -29,6 +29,8 @@
       font-family: 'Orbitron', sans-serif;
       color: #ff4a4a;
     }
+
+    /* --- Fixed Navigation --- */
     nav.teams-bar {
       background-color: #1f1f1f;
       padding: 0.5rem 2rem;
@@ -37,15 +39,20 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 1rem;
       justify-content: center;
+      gap: 1rem;
     }
     .nav-links a {
+      display: inline-block;
+      min-width: 110px; /* Consistent width for all links */
+      text-align: center;
       color: white;
       text-decoration: none;
       padding: 0.5rem 1rem;
       border-radius: 6px;
       transition: background-color 0.3s ease;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
     }
     .nav-links a:hover,
     .nav-links a.active {
@@ -65,7 +72,8 @@
       padding: 0.5rem;
       border-radius: 6px;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .dropdown:hover .dropdown-content {
       display: flex;
@@ -75,6 +83,7 @@
       padding: 0.4rem 0.6rem;
       color: white;
       white-space: nowrap;
+      text-align: left;
     }
     .dropdown-content a:hover {
       background-color: #ff4a4a;
@@ -159,7 +168,7 @@
             <a href="robots.html">Robots</a>
             <a href="awards.html">Awards</a>
             <a href="legacy.html">Legacy</a>
-             <a href="media.html">Media</a>
+            <a href="media.html">Media</a>
           </div>
         </div>
 
@@ -211,4 +220,3 @@
   </footer>
 </body>
 </html>
-
