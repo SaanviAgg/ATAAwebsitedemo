@@ -1,74 +1,140 @@
-title: Sponsors
-number: 7
-link: sponsors
----
-<div class="container" style="padding: 0px">
-	<div class="row">
-		<div class="col-12">
-			<h1 style="color: black">Sponsors</h1>
-			<p>ATAA is grateful for the support of our many amazing sponsors. We would not be where we are today without their generous support.</p>
-		</div>
-	</div>
-	<div class="row align-items-center" id="sponsor-rows">
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.telus.com/en/"><img class="img-fluid" src="/resources/img/sponsors/telus.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.ledcor.com/"><img class="img-fluid" src="/resources/img/sponsors/ledcor.png"></a>
-		</div>
-		<div class="col-3 col-md-3 col-lg-3" id="sponsor-cols">
-			<a href="https://www.surerus-murphy.com/"><img class="img-fluid" src="/resources/img/sponsors/surerus-murphy.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.tetranex.com/"><img class="img-fluid" src="/resources/img/sponsors/tetranex.jpg"></a>
-		</div>
-		<div class="col-3 col-md-3 col-lg-3" id="sponsor-cols">
-			<a href="https://www.peloton.com/"><img class="img-fluid" src="/resources/img/sponsors/peloton.png"></a>
-		</div>
-		<div class="col-3 col-md-3 col-lg-3" id="sponsor-cols">
-			<a href="https://www.shingdigital.com/"><img class="img-fluid" src="/resources/img/sponsors/shing.png"></a>
-		</div>
-		<div class="col-3 col-md-3 col-lg-3" id="sponsor-cols">
-			<img class="img-fluid" src="/resources/img/sponsors/brandt.svg">
-		</div>
-		<div class="col-3 col-md-3 col-lg-3" id="sponsor-cols">
-			<a href="https://brentwoodprinting.com/"><img class="img-fluid" src="/resources/img/sponsors/brentwood.png"></a>
-		</div>
-		<div class="col-3 col-md-3 col-lg-3" id="sponsor-cols">
-			<a href="https://www.valentinevolvo.com/"><img class="img-fluid" src="/resources/img/sponsors/valentine-volvo.svg"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.mrlsolutions.com/"><img class="img-fluid" src="/resources/img/sponsors/mrl.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.thorncliffefamilydental.com/"><img class="img-fluid" src="/resources/img/sponsors/tfd.jpg"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.pandell.com/"><img class="img-fluid" src="/resources/img/sponsors/pandell.jpg"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://ghaasfoundation.org"><img class="img-fluid" src="/resources/img/sponsors/gene-haas.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.argosyfnd.org/"><img class="img-fluid" src="/resources/img/sponsors/argosy-foundation.jpg"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.ilf.com/en-ca/"><img class="img-fluid" src="/resources/img/sponsors/ilf.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.patronscan.com/"><img class="img-fluid" src="/resources/img/sponsors/patronscan.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://polarcomm.ca/"><img class="img-fluid" src="/resources/img/sponsors/polar-comms.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.aecon.com/"><img class="img-fluid" src="/resources/img/sponsors/aecon.png"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.mottelectric.com/"><img class="img-fluid" src="/resources/img/sponsors/mott-telecom.jpg"></a>
-		</div>
-		<div class="col-4 col-md-4 col-lg-4" id="sponsor-cols">
-			<a href="https://www.wesco.com"><img class="img-fluid" src="/resources/img/sponsors/wesco.jpg"></a>
-		</div>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATAA Robotics Sponsors</title>
+  <link rel="stylesheet" href="ataaStyles.css" />
+  <style>
+    .sponsor-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .sponsor-container h1 {
+      color: #ff4a4a;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .sponsor-grid img {
+      max-width: 150px;
+      max-height: 100px;
+      object-fit: contain;
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(255, 74, 74, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sponsor-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255, 74, 74, 0.4);
+    }
+
+    .thank-you {
+      margin-top: 50px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Nav Bar -->
+  <header>
+    <div class="header-container">
+      <img src="https://codehs.com/uploads/629bde257bd433c68949ed8eb5eebe72" alt="ATAA Logo" class="logo" />
+      <div class="banner">Welcome to ATAA Robotics</div>
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sponsors Section -->
+  <main class="sponsor-container">
+    <h1>Our Amazing Sponsors</h1>
+    <div class="sponsor-grid">
+      <img src="sponship pics/aecon.png" alt="Aecon" />
+      <img src="sponship pics/analytic-engineering.png" alt="Analytic Engineering" />
+      <img src="sponship pics/argosy-foundation.jpg" alt="Argosy Foundation" />
+      <img src="sponship pics/brandt.svg" alt="Brandt" />
+      <img src="sponship pics/brentwood.png" alt="Brentwood" />
+      <img src="sponship pics/emerson.png" alt="Emerson" />
+      <img src="sponship pics/gene-haas.png" alt="Gene Haas Foundation" />
+      <img src="sponship pics/hatch.png" alt="Hatch" />
+      <img src="sponship pics/ilf.png" alt="ILF" />
+      <img src="sponship pics/knights-of-columbus.png" alt="Knights of Columbus" />
+      <img src="sponship pics/launchcode.svg" alt="Launchcode" />
+      <img src="sponship pics/ledcor.png" alt="Ledcor" />
+      <img src="sponship pics/mott-telecom.jpg" alt="Mott Telecom" />
+      <img src="sponship pics/mrl.png" alt="MRL" />
+      <img src="sponship pics/pandell.jpg" alt="Pandell" />
+      <img src="sponship pics/patronscan.png" alt="Patronscan" />
+      <img src="sponship pics/peloton.png" alt="Peloton" />
+      <img src="sponship pics/polar-comms.png" alt="Polar Communications" />
+      <img src="sponship pics/shing.png" alt="Shing" />
+      <img src="sponship pics/signature-seismic.jpg" alt="Signature Seismic" />
+      <img src="sponship pics/surerus-murphy.png" alt="Surerus Murphy" />
+      <img src="sponship pics/telus.png" alt="Telus" />
+      <img src="sponship pics/tetranex.jpg" alt="Tetranex" />
+      <img src="sponship pics/tetranex.png" alt="Tetranex Logo" />
+      <img src="sponship pics/tfd.jpg" alt="TFD" />
+      <img src="sponship pics/valentine-volvo.png" alt="Valentine Volvo" />
+      <img src="sponship pics/valentine-volvo.svg" alt="Valentine Volvo SVG" />
+      <img src="sponship pics/wesco.jpg" alt="Wesco" />
+    </div>
+    <p class="thank-you">We couldn’t do what we do without the incredible support of these sponsors.  
+      Interested in becoming a sponsor? <a href="mailto:info@ataarobotics.ca">Contact us</a>.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ATAA Robotics | Contact us at <a href="mailto:info@ataarobotics.ca">info@ataarobotics.ca</a></p>
+  </footer>
+
+</body>
+</html>
