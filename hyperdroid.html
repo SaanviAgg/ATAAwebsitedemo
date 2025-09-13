@@ -1,82 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page Under Construction</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>FTC Team Hyperdroids</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
+    /* Inline CSS for quick testing (move to styles.css if you want external) */
     body {
-      background-color: #0f0f0f;
-      color: #ff4a4a;
-      font-family: 'Orbitron', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
       margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      flex-direction: column;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
       text-align: center;
-      overflow: hidden;
     }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      animation: pulse 1.8s infinite;
+    header h1 {
+      margin: 0;
+      font-size: 2em;
     }
-
-    p {
-      color: #ccc;
-      font-size: 1.2rem;
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .team-info {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .team-info h2 {
       margin-top: 0;
-      animation: fadeIn 2s ease forwards;
+      color: #ff6600; /* Orange for Hyperdroids */
     }
-
-    .gear {
-      font-size: 4rem;
-      animation: spin 2.5s linear infinite;
-      margin-top: 30px;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.7; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .back-link {
-      margin-top: 40px;
+    .btn {
       display: inline-block;
-      color: #ff4a4a;
-      border: 2px solid #ff4a4a;
       padding: 10px 20px;
-      text-decoration: none;
+      background: #ff6600;
+      color: white;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
     }
-
-    .back-link:hover {
-      background-color: #ff4a4a;
-      color: black;
+    .btn:hover {
+      background: #e65500;
+    }
+    .updates {
+      margin-top: 30px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>🚧 This Page is Under Construction 🚧</h1>
-  <p>We're working hard to bring you something awesome.<br>Please check back soon!</p>
-  <div class="gear">⚙️</div>
-  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <header>
+    <h1>FTC Team 16247 – The Hyperdroids</h1>
+    <p>Calgary, Alberta</p>
+  </header>
+
+  <div class="container">
+    <section class="team-info">
+      <h2>About the Team</h2>
+      <p>
+        The Hyperdroids are an FTC robotics team based in Calgary, Alberta. 
+        They are passionate about innovation, teamwork, and pushing the boundaries of STEM through robotics.
+      </p>
+      <a href="https://theorangealliance.org/teams/16247" target="_blank" class="btn">View on The Orange Alliance</a>
+    </section>
+
+    <section class="updates">
+      <h2>Team Highlights</h2>
+      <ul>
+        <li>⚙️ Competed in the Alberta FTC League</li>
+        <li>🤝 Strong focus on outreach and community engagement</li>
+        <li>🏆 Consistently growing as a competitive team</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hyperdroids – Calgary, Alberta | Part of the FIRST Tech Challenge</p>
+  </footer>
+
 </body>
 </html>
