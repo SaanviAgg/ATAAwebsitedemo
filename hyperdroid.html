@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>FTC Team 10015 – Hyperdroid</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ataaStyles.css">
   <style>
+    /* Body and Header */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #ff4da6, #ff80bf, #ffe6f2);
@@ -14,24 +15,74 @@
       color: #333;
     }
 
-    header {
+    header.main-header {
       background: linear-gradient(135deg, #ff1a8c, #ff66b2);
       color: white;
       padding: 60px 20px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
-    header h1 {
+
+    header.main-header h1 {
       margin: 0;
       font-size: 2.8em;
       letter-spacing: 2px;
     }
-    header p {
+
+    header.main-header p {
       margin: 10px 0 0;
       font-size: 1.2em;
       opacity: 0.9;
     }
 
+    /* Navbar */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #000;
+      padding: 10px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #222;
+      min-width: 160px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Main container and sections */
     .container {
       max-width: 1100px;
       margin: auto;
@@ -46,6 +97,7 @@
       margin-bottom: 30px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     section:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
@@ -67,6 +119,7 @@
       font-weight: bold;
       transition: background 0.3s, transform 0.3s;
     }
+
     .btn:hover {
       background: linear-gradient(135deg, #e60073, #ff4da6);
       transform: scale(1.05);
@@ -75,6 +128,7 @@
     ul {
       padding-left: 20px;
     }
+
     ul li {
       margin-bottom: 10px;
     }
@@ -88,77 +142,48 @@
       border-top: 4px solid #ff80bf;
     }
   </style>
-    <title>ATAA Robotics</title>
-  <link rel="stylesheet" href="ataaStyles.css" />
-  <style>
-    
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .nav-links > a,
-    .nav-links > .dropdown > a {
-      white-space: nowrap;
-      padding: 0.3rem 0.6rem;
-      display: inline-block;
-    }
-    .dropdown-content {
-      min-width: 160px; /* keeps dropdown width consistent */
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="ATAA Logo" class="logo" />
-      <div class="banner">Welcome to ATAA Robotics</div>
-    </div>
-    <nav class="teams-bar">
-      <div class="nav-links">
-        <div class="dropdown">
-          <a href="index.html">Home</a>
-        </div>
 
-        <div class="dropdown">
-          <a href="#frc">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html">Robots</a>
-            <a href="awards.html">Awards</a>
-            <a href="legacy.html">Legacy</a>
-            <a href="media.html">Media</a>
-          </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
 
-        <div class="dropdown">
-          <a href="#ftc">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact</a>
+    <div class="dropdown">
+      <a href="#frc">FRC - FORGE 4421</a>
+      <div class="dropdown-content">
+        <a href="team.html">About</a>
+        <a href="robots.html">Robots</a>
+        <a href="awards.html">Awards</a>
+        <a href="legacy.html">Legacy</a>
+        <a href="media.html">Media</a>
       </div>
-    </nav>
-  </header>
+    </div>
 
-</head>
-<body>
+    <div class="dropdown">
+      <a href="#ftc">FTC Teams</a>
+      <div class="dropdown-content">
+        <a href="hyperdroid.html">HyperDroid #10015</a>
+        <a href="cai.html">Crazy AI #16596</a>
+        <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+        <a href="techtitans.html">Tech Titans #23684</a>
+      </div>
+    </div>
 
-  <header>
+    <a href="fll.html">FLL Teams</a>
+    <a href="event.html">Events</a>
+    <a href="impact.html">Impact</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Header -->
+  <header class="main-header">
     <h1>FTC Team 10015 – Hyperdroid</h1>
     <p>Part of ATAA Robotics • Calgary, Alberta</p>
   </header>
 
+  <!-- Content -->
   <div class="container">
 
     <section>
@@ -182,7 +207,7 @@
         <a href="https://ftcscout.org/team/10015" target="_blank" class="btn">FTC Scout</a>
       </p>
       <ul>
-        <li> World OPR Ranking: <strong>223rd (158.13)</strong></li>
+        <li>World OPR Ranking: <strong>223rd (158.13)</strong></li>
         <li>Autonomous Ranking: <strong>119th (42.47)</strong></li>
       </ul>
     </section>
