@@ -1,3 +1,12 @@
+/* Make *everything* inherit the body font */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* choose your font */
+  font-size: 16px; /* optional, keeps it consistent */
+  color: #333; /* optional, sets a standard text color */
+}
+* {
+  font-family: inherit !important;
+
 /* --- Base Styles --- */
 body {
   margin: 0;
