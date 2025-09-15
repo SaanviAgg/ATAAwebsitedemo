@@ -1,204 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FTC Team 23468 – Uncivilized Mecha Monkeys</title>
-  <link rel="stylesheet" href="ataaStyles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Under Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* Navbar fixes */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .nav-links > a,
-    .nav-links > .dropdown > a {
-      white-space: nowrap;
-      padding: 0.3rem 0.6rem;
-      display: inline-block;
-    }
-    .dropdown-content {
-      min-width: 160px;
-    }
-
-    /* Page styling */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #111;
-      color: #eee;
+      background-color: #0f0f0f;
+      color: #ff4a4a;
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-      border-bottom: 4px solid #fff;
-    }
-    header .header-container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    header .logo {
-      height: 60px;
-    }
-    header .banner {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-    header h1, header p {
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
       text-align: center;
-      margin: 10px 0 0;
+      overflow: hidden;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: pulse 1.8s infinite;
     }
 
-    section {
-      background: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255,255,255,0.08);
-      margin-bottom: 30px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(255,255,255,0.15);
-    }
-
-    section h2 {
+    p {
+      color: #ccc;
+      font-size: 1.2rem;
       margin-top: 0;
-      color: #fff;
-      font-size: 1.8em;
-      border-bottom: 2px solid #fff;
-      padding-bottom: 8px;
+      animation: fadeIn 2s ease forwards;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #fff;
-      color: #000;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .btn:hover {
-      background: #ccc;
-      transform: scale(1.05);
+    .gear {
+      font-size: 4rem;
+      animation: spin 2.5s linear infinite;
+      margin-top: 30px;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .back-link {
       margin-top: 40px;
-      border-top: 4px solid #fff;
+      display: inline-block;
+      color: #ff4a4a;
+      border: 2px solid #ff4a4a;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .back-link:hover {
+      background-color: #ff4a4a;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="ATAA Logo" class="logo" />
-      <div class="banner">Welcome to ATAA Robotics</div>
-    </div>
-    <nav class="teams-bar">
-      <div class="nav-links">
-        <div class="dropdown">
-          <a href="index.html">Home</a>
-        </div>
-
-        <div class="dropdown">
-          <a href="#frc">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html">Robots</a>
-            <a href="awards.html">Awards</a>
-            <a href="legacy.html">Legacy</a>
-            <a href="media.html">Media</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#ftc">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="container">
-    <header>
-      <h1>FTC Team 23468</h1>
-      <p>Uncivilized Mecha Monkeys • Calgary, AB, Canada</p>
-    </header>
-
-    <section>
-      <h2>Team Overview</h2>
-      <p>
-        The <strong>Uncivilized Mecha Monkeys</strong> are an FTC robotics team 
-        from Calgary, Alberta, competing in the FIRST Tech Challenge.
-      </p>
-      <ul>
-        <li>Family/Community-based team</li>
-        <li>Rookie Year: <strong>2023</strong></li>
-        <li>Data proudly provided by <strong>FIRST</strong></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>About</h2>
-      <p>
-        As a young but ambitious team, the Mecha Monkeys combine creativity, 
-        teamwork, and technical skill to grow stronger each season in the world of 
-        competitive robotics.
-      </p>
-    </section>
-
-    <section>
-      <h2>Links</h2>
-      <p>
-        🔗 Check out the team on 
-        <a href="https://theorangealliance.org/teams/23468" target="_blank" class="btn">
-          The Orange Alliance
-        </a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 FTC Team 23468 – Uncivilized Mecha Monkeys | Calgary, AB</p>
-  </footer>
+  <h1>🚧 This Page is Under Construction 🚧</h1>
+  <p>We're working hard to bring you something awesome.<br>Please check back soon!</p>
+  <div class="gear">⚙️</div>
+  <a href="index.html" class="back-link">← Back to Home</a>
 </body>
 </html>
