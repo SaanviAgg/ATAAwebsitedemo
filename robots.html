@@ -36,6 +36,8 @@
     .robot-flip-front,
     .robot-flip-back {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border-radius: 18px;
@@ -67,7 +69,7 @@
       background: rgba(0, 0, 0, 0.7);
       width: 100%;
       text-align: center;
-      padding: 10px 0;
+      padding: 8px 0;
     }
 
     .robot-name {
@@ -89,6 +91,16 @@
       font-size: 14px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .robot-back-labels {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .robot-back-labels .robot-name {
+      margin-bottom: 4px;
     }
 
     .robot-desc {
@@ -206,8 +218,7 @@
       <div class="nav-links">
         <div class="dropdown">
           <a href="index.html">Home</a>
-          <div class="dropdown-content">
-          </div>
+          <div class="dropdown-content"></div>
         </div>
 
         <div class="dropdown">
@@ -217,7 +228,7 @@
             <a href="robots.html" class="active">Robots</a>
             <a href="awards.html">Awards</a>
             <a href="legacy.html">Legacy</a>
-             <a href="media.html">Media</a>
+            <a href="media.html">Media</a>
           </div>
         </div>
 
@@ -255,6 +266,10 @@
             </div>
           </div>
           <div class="robot-flip-back">
+            <div class="robot-back-labels">
+              <div class="robot-name">LOKI</div>
+              <div class="robot-year">2024–2025</div>
+            </div>
             <div class="robot-desc">
 <strong>Game:</strong> Reefscape — stacking pipes on a coral reef-like structure, scoring kickballs into a net, and climbing a cage in endgame.
 
@@ -290,6 +305,10 @@
             </div>
           </div>
           <div class="robot-flip-back">
+            <div class="robot-back-labels">
+              <div class="robot-name">Sir William</div>
+              <div class="robot-year">2023–2024</div>
+            </div>
             <div class="robot-desc">
 <strong>Game:</strong> Crescendo — shooting orange tori into a structure and climbing onto a chain in endgame.
 
@@ -324,6 +343,10 @@
             </div>
           </div>
           <div class="robot-flip-back">
+            <div class="robot-back-labels">
+              <div class="robot-name">Xcalibur</div>
+              <div class="robot-year">2022–2023</div>
+            </div>
             <div class="robot-desc">
 <strong>Game:</strong> Charged Up — stacking cubes and pylons on shelves and balancing on the charging station.
 
@@ -355,6 +378,10 @@
             </div>
           </div>
           <div class="robot-flip-back">
+            <div class="robot-back-labels">
+              <div class="robot-name">Doug</div>
+              <div class="robot-year">2021–2022</div>
+            </div>
             <div class="robot-desc">
 <strong>Game:</strong> Rapid React — shooting balls and climbing.
 
@@ -387,4 +414,3 @@
   </footer>
 </body>
 </html>
-
