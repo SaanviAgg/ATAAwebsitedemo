@@ -61,7 +61,7 @@
       border-bottom: 3px solid #ff4a4a;
       box-shadow: 0 4px 12px rgba(255, 74, 74, 0.35);
       position: sticky;
-      top: 72px;
+      top: 0; /* aligned with header */
       z-index: 999;
     }
     nav.teams-bar .nav-links {
@@ -99,7 +99,7 @@
     nav.teams-bar .dropdown-content {
       display: none;
       position: absolute;
-      top: 38px;
+      top: 100%; /* directly below parent */
       left: 0;
       background: #2a2a2a;
       border-radius: 10px;
@@ -187,6 +187,7 @@
       text-decoration: underline;
     }
 
+    /* Quote */
     .quote {
       max-width: 720px;
       margin: 0 auto 4rem;
@@ -251,6 +252,9 @@
       transition: background-color 0.3s ease, color 0.3s ease;
       user-select: none;
       box-shadow: 0 8px 22px rgba(255, 74, 74, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Vertically center */
     }
     .downloads-list li:hover {
       background-color: #ff4a4a;
@@ -261,6 +265,7 @@
       color: inherit;
       text-decoration: none;
       display: block;
+      width: 100%;
     }
 
     /* Responsive */
@@ -298,73 +303,65 @@
   <h1>FORGE 4421 – Media</h1>
 </header>
 
+<nav class="teams-bar" aria-label="Primary navigation">
+  <div class="nav-links">
+    <a href="index.html">Home</a>
 
-  <nav class="teams-bar" aria-label="Primary navigation">
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-
-      <div class="dropdown">
-        <a href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">FORGE 4421 ▼</a>
-        <div class="dropdown-content" aria-label="FORGE 4421 submenu">
-          <a href="team.html">Team</a>
-          <a href="robots.html">Robots</a>
-          <a href="awards.html">Awards</a>
-          <a href="legacy.html">Legacy</a>
-          <a href="media.html" class="active">Media</a>
-        </div>
+    <div class="dropdown">
+      <a href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">FORGE 4421 ▼</a>
+      <div class="dropdown-content" aria-label="FORGE 4421 submenu">
+        <a href="team.html">Team</a>
+        <a href="robots.html">Robots</a>
+        <a href="awards.html">Awards</a>
+        <a href="legacy.html">Legacy</a>
+        <a href="media.html" class="active">Media</a>
       </div>
-
-      <div class="dropdown">
-        <a href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">FTC Teams ▼</a>
-        <div class="dropdown-content" aria-label="FTC Teams submenu">
-          <a href="hyperdroid.html">HyperDroid #10015</a>
-          <a href="cai.html">Crazy AI #16596</a>
-          <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-          <a href="techtitans.html">Tech Titans #23684</a>
-        </div>
-      </div>
-
-      <a href="fll.html">FLL Teams</a>
-      <a href="event.html">Events</a>
-      <a href="impact.html">Impact</a>
-      <a href="sponsors.html">Sponsors</a>
-      <a href="contact.html">Contact</a>
     </div>
-  </nav>
 
-  <main>
-    <section class="press-section">
-      <h2 class="section-title">Press &amp; News</h2>
-      <ul class="press-list">
-        <li>
-          <a href="https://youtu.be/RvN2nVQNOXI?feature=shared" target="_blank" rel="https://youtu.be/RvN2nVQNOXI?feature=shared" tabindex="0">
-            Forge Robotics Featured on Local News
-          </a>
-        </li>
-        <li>
-          <a href="https://www.ctvnews.ca/calgary/article/calgary-students-prepare-for-robotics-competitions-in-vancouver-and-las-vegas/" target="_blank" rel="https://www.ctvnews.ca/calgary/article/calgary-students-prepare-for-robotics-competitions-in-vancouver-and-las-vegas/" tabindex="0">
-             Local News Article 
-          </a>
-        </li>
-        
-      </ul>
-    </section>
+    <div class="dropdown">
+      <a href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">FTC Teams ▼</a>
+      <div class="dropdown-content" aria-label="FTC Teams submenu">
+        <a href="hyperdroid.html">HyperDroid #10015</a>
+        <a href="cai.html">Crazy AI #16596</a>
+        <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+        <a href="techtitans.html">Tech Titans #23684</a>
+      </div>
+    </div>
 
-    <section class="instagram-section" aria-label="Instagram feed">
-      <h2>Instagram Feed</h2>
-      
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/4421forge/" data-instgrm-version="14" style="background:#FFF; border:none; margin:1rem auto; max-width:540px; padding:0; width:99%;"></blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
-      <p>Follow us on <a href="https://www.instagram.com/yourteamhandle/" target="_blank" rel="noopener noreferrer" tabindex="0">@4421forge</a></p>
-    </section>
+    <a href="fll.html">FLL Teams</a>
+    <a href="event.html">Events</a>
+    <a href="impact.html">Impact</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-    <section class="downloads-section" aria-label="Downloads and media kit">
-      <h2 class="section-title">Downloads &amp; Media Kit</h2>
-      <ul class="downloads-list">
-        <li><a href="/assets/media/ATAA_Sponsorship_Package.pdf" target="_blank" download tabindex="0">Sponsorship Package (PDF)</a></li>
-        <li><a href="robot pics/forge logo.png" target="_blank" download tabindex="0"> Team Logos (ZIP)</a></li>
-      </ul>
-    </section>
-  </main>
+<main>
+  <section class="press-section">
+    <h2 class="section-title">Press &amp; News</h2>
+    <ul class="press-list">
+      <li>
+        <a href="https://youtu.be/RvN2nVQNOXI?feature=shared" target="_blank" rel="noopener noreferrer" tabindex="0">
+          Forge Robotics Featured on Local News
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="instagram-section" aria-label="Instagram feed">
+    <h2>Instagram Feed</h2>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/4421forge/" data-instgrm-version="14" style="background:#FFF; border:none; margin:1rem auto; max-width:540px; padding:0; width:99%;"></blockquote>
+    <script async src="//www.instagram.com/embed.js"></script>
+    <p>Follow us on <a href="https://www.instagram.com/4421forge/" target="_blank" rel="noopener noreferrer" tabindex="0">@4421forge</a></p>
+  </section>
+
+  <section class="downloads-section" aria-label="Downloads and media kit">
+    <h2 class="section-title">Downloads &amp; Media Kit</h2>
+    <ul class="downloads-list">
+      <li><a href="/assets/media/ATAA_Sponsorship_Package.pdf" target="_blank" download tabindex="0">Sponsorship Package (PDF)</a></li>
+      <li><a href="robot pics/forge logo.png" target="_blank" download tabindex="0">Team Logos (ZIP)</a></li>
+    </ul>
+  </section>
+</main>
 </body>
 </html>
