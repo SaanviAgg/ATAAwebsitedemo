@@ -15,7 +15,7 @@
       margin: 0;
     }
 
-    /* Sponsor Section */
+    
     .sponsor-container {
       max-width: 1200px;
       margin: 50px auto;
@@ -32,27 +32,27 @@
 
     .sponsor-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 30px;
       align-items: center;
       justify-items: center;
     }
 
     .sponsor-grid a img {
-      max-width: 150px;
+      max-width: 160px;
       max-height: 100px;
       object-fit: contain;
       background: #1a1a1a;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 4px 12px rgba(255, 74, 74, 0.2);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 4px 12px rgba(255, 74, 74, 0.25);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: block;
     }
 
     .sponsor-grid a img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(255, 74, 74, 0.4);
+      transform: scale(1.07);
+      box-shadow: 0 6px 18px rgba(255, 74, 74, 0.45);
     }
 
     .invert-logo {
@@ -60,17 +60,36 @@
     }
 
     .thank-you {
-      margin-top: 50px;
-      font-size: 1.2rem;
+      margin-top: 60px;
+      font-size: 1.25rem;
       color: #ccc;
+      line-height: 1.6;
     }
 
     .thank-you a {
       color: #ff4a4a;
       text-decoration: none;
+      font-weight: bold;
     }
 
     .thank-you a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ff4a4a;
+      text-decoration: none;
+    }
+
+    footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -79,7 +98,7 @@
 
   <header>
     <div class="header-container">
-      <img src="https://codehs.com/uploads/629bde257bd433c68949ed8eb5eebe72" alt="ATAA Logo" class="logo" />
+      <img src="https://codehs.com/uploads/629bde257bd433c68949ed8eb5eebe72" alt="ATAA Robotics Logo" class="logo" />
       <div class="banner">Welcome to ATAA Robotics</div>
     </div>
     <nav class="teams-bar">
@@ -116,35 +135,30 @@
   <main class="sponsor-container">
     <h1>Our Amazing Sponsors</h1>
     <div class="sponsor-grid">
-      <a href="https://www.aecon.com" target="_blank"><img src="sponsorship pics/aecon.png" alt="Aecon" /></a>
-      <a href="https://www.analytic.ca" target="_blank"><img src="sponsorship pics/analytic-engineering.png" alt="Analytic Engineering" /></a>
-      <a href="https://argosyfoundation.org" target="_blank"><img src="sponsorship pics/argosy-foundation.jpg" alt="Argosy Foundation" /></a>
-      <a href="#" target="_blank"><img src="sponsorship pics/brandt.svg" alt="Brandt" class="invert-logo"/></a>
-      <a href="https://www.brentwoodprinting.com/" target="_blank"><img src="sponsorship pics/brentwood.png" alt="Brentwood" class="invert-logo"/></a>
-      <a href="https://www.emerson.com" target="_blank"><img src="sponsorship pics/emerson.png" alt="Emerson" /></a>
-      <a href="https://www.genehaasfoundation.org" target="_blank"><img src="sponsorship pics/gene-haas.png" alt="Gene Haas Foundation" /></a>
-      <a href="https://www.hatch.com" target="_blank"><img src="sponsorship pics/hatch.png" alt="Hatch" /></a>
-      <a href="https://www.ilf.com/en-ca/" target="_blank"><img src="sponsorship pics/ilf.png" alt="ILF" class="invert-logo"/></a>
-      <a href="https://www.kofc.ab.ca/" target="_blank"><img src="sponsorship pics/knights-of-columbus.png" alt="Knights of Columbus" class="invert-logo"/></a>
-      <a href="https://www.launchcode.org" target="_blank"><img src="sponsorship pics/launchcode.svg" alt="Launchcode" class="invert-logo"/></a>
-      <a href="https://www.ledcor.com" target="_blank"><img src="sponsorship pics/ledcor.png" alt="Ledcor" /></a>
-      <a href="https://www.mottelectric.com/" target="_blank"><img src="sponsorship pics/mott-telecom.jpg" alt="Mott Telecom" /></a>
-      <a href="https://www.mrlsolutions.com/" target="_blank"><img src="sponsorship pics/mrl.png" alt="MRL" /></a>
-      <a href="https://www.pandell.com/" target="_blank"><img src="sponsorship pics/pandell.jpg" alt="Pandell" /></a>
-      <a href="https://www.patronscan.com/" target="_blank"><img src="sponsorship pics/patronscan.png" alt="Patronscan" /></a>
-      <a href="https://www.peloton.com/" target="_blank"><img src="sponsorship pics/peloton.png" alt="Peloton" /></a>
-      <a href="https://polarcomm.ca/" target="_blank"><img src="sponsorship pics/polar-comms.png" alt="Polar Communications" /></a>
-      <a href="https://shingdigital.com/" target="_blank"><img src="sponsorship pics/shing.png" alt="Shing" /></a>
-      <a href="#" target="_blank"><img src="sponsorship pics/signature-seismic.jpg" alt="Signature Seismic" /></a>
-      <a href="https://www.surerus-murphy.com/" target="_blank"><img src="sponsorship pics/surerus-murphy.png" alt="Surerus Murphy" /></a>
-      <a href="https://www.telus.com" target="_blank"><img src="sponsorship pics/telus.png" alt="Telus" /></a>
-      <a href="https://www.tetranex.com/" target="_blank"><img src="sponsorship pics/tetranex.jpg" alt="Tetranex" /></a>
-      <a href="https://www.tetranex.com/" target="_blank"><img src="sponsorship pics/tetranex.png" alt="Tetranex Logo" /></a>
-      <a href="#" target="_blank"><img src="sponsorship pics/tfd.jpg" alt="TFD" /></a>
-      <a href="https://www.valentinevolvo.com" target="_blank"><img src="sponsorship pics/valentine-volvo.png" alt="Valentine Volvo" /></a>
-      <a href="https://www.valentinevolvo.com" target="_blank"><img src="sponsorship pics/valentine-volvo.svg" alt="Valentine Volvo SVG" /></a>
-      <a href="https://www.wesco.com/us/en.html" target="_blank"><img src="sponsorship pics/wesco.jpg" alt="Wesco" /></a>
+      <a href="https://www.aecon.com" target="_blank"><img src="sponsorship_pics/aecon.png" alt="Aecon" /></a>
+      <a href="https://www.analytic.ca" target="_blank"><img src="sponsorship_pics/analytic-engineering.png" alt="Analytic Engineering" /></a>
+      <a href="https://argosyfoundation.org" target="_blank"><img src="sponsorship_pics/argosy-foundation.jpg" alt="Argosy Foundation" /></a>
+      <a href="https://www.brentwoodprinting.com/" target="_blank"><img src="sponsorship_pics/brentwood.png" alt="Brentwood Printing" class="invert-logo" /></a>
+      <a href="https://www.emerson.com" target="_blank"><img src="sponsorship_pics/emerson.png" alt="Emerson" /></a>
+      <a href="https://www.genehaasfoundation.org" target="_blank"><img src="sponsorship_pics/gene-haas.png" alt="Gene Haas Foundation" /></a>
+      <a href="https://www.hatch.com" target="_blank"><img src="sponsorship_pics/hatch.png" alt="Hatch" /></a>
+      <a href="https://www.ilf.com/en-ca/" target="_blank"><img src="sponsorship_pics/ilf.png" alt="ILF" class="invert-logo" /></a>
+      <a href="https://www.kofc.ab.ca/" target="_blank"><img src="sponsorship_pics/knights-of-columbus.png" alt="Knights of Columbus" class="invert-logo" /></a>
+      <a href="https://www.launchcode.org" target="_blank"><img src="sponsorship_pics/launchcode.svg" alt="Launchcode" class="invert-logo" /></a>
+      <a href="https://www.ledcor.com" target="_blank"><img src="sponsorship_pics/ledcor.png" alt="Ledcor" /></a>
+      <a href="https://www.mottelectric.com/" target="_blank"><img src="sponsorship_pics/mott-telecom.jpg" alt="Mott Telecom" /></a>
+      <a href="https://www.mrlsolutions.com/" target="_blank"><img src="sponsorship_pics/mrl.png" alt="MRL Solutions" /></a>
+      <a href="https://www.pandell.com/" target="_blank"><img src="sponsorship_pics/pandell.jpg" alt="Pandell" /></a>
+      <a href="https://www.patronscan.com/" target="_blank"><img src="sponsorship_pics/patronscan.png" alt="Patronscan" /></a>
+      <a href="https://www.peloton.com/" target="_blank"><img src="sponsorship_pics/peloton.png" alt="Peloton" /></a>
+      <a href="https://polarcomm.ca/" target="_blank"><img src="sponsorship_pics/polar-comms.png" alt="Polar Communications" /></a>
+      <a href="https://shingdigital.com/" target="_blank"><img src="sponsorship_pics/shing.png" alt="Shing Digital" /></a>
+      <a href="https://www.surerus-murphy.com/" target="_blank"><img src="sponsorship_pics/surerus-murphy.png" alt="Surerus Murphy" /></a>
+      <a href="https://www.telus.com" target="_blank"><img src="sponsorship_pics/telus.png" alt="Telus" /></a>
+      <a href="https://www.valentinevolvo.com" target="_blank"><img src="sponsorship_pics/valentine-volvo.png" alt="Valentine Volvo" /></a>
+      <a href="https://www.wesco.com/us/en.html" target="_blank"><img src="sponsorship_pics/wesco.jpg" alt="Wesco" /></a>
     </div>
+
     <p class="thank-you">
       We couldn’t do what we do without the incredible support of these sponsors.<br>
       Interested in becoming a sponsor? <a href="mailto:info@ataarobotics.ca">Contact us</a>.
@@ -159,4 +173,3 @@
 
 </body>
 </html>
-
