@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legacy | Forge Robotics</title>
+  <link rel="stylesheet" href="ataaStyles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -74,12 +75,12 @@
       padding: 0.4rem 0.6rem;
     }
 
-    /* Timeline Layout */
+    /* Timeline container and line */
     .timeline {
       position: relative;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 3rem auto;
-      padding: 2rem;
+      padding: 2rem 0;
     }
     .timeline::after {
       content: '';
@@ -91,6 +92,7 @@
       left: 50%;
       margin-left: -2px;
     }
+
     .timeline-entry {
       padding: 1.5rem 2rem;
       position: relative;
@@ -123,6 +125,7 @@
     .right::before {
       left: -16px;
     }
+
     .timeline-entry h2 {
       font-family: 'Playfair Display', serif;
       color: #b33951;
@@ -133,17 +136,20 @@
     }
     a {
       color: #1e90ff;
+      text-decoration: underline;
     }
     a:hover {
       text-decoration: none;
     }
 
-    /* Gallery Section */
+    /* Gallery (outside timeline) */
     .gallery {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
-      margin-top: 2rem;
+      padding: 0 2rem;
     }
     .gallery img {
       width: 100%;
@@ -161,7 +167,7 @@
       padding: 1rem;
       background-color: #1f1f1f;
       color: #bbb;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     @media screen and (max-width: 768px) {
@@ -235,18 +241,16 @@
     <div class="timeline-entry left">
       <h2>The Formation of Forge Robotics (Team 4421)</h2>
       <p>In 2021, recognizing the potential for greater impact through collaboration, ATA and SWAT Bots merged to form Forge Robotics (Team 4421). This fusion brought together the strengths of both teams: ATA's legacy of innovation and mentorship, and SWAT Bots' dynamic engineering and competition experience. Together, Forge Robotics aims to push the boundaries of what is possible in robotics, fostering a culture of learning, resilience, and community engagement.</p>
-    </div>
-
-    <div class="timeline-entry right">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <img src="https://codehs.com/uploads/e53ae46597cce6547ca55e7a3c3c3ccd" alt="2012 Einstein Run">
-        <img src="robot pics/4421 2022 Champs.jpg" alt="Regional Win 2015">
-        <img src="robot pics/ATA 4334 2018 Clawboy.jpg" alt="Drive Team">
-        <img src="robot pics/ATA 4334 2019 Neutrino.jpg" alt="Robot Showcase">
-      </div>
+      <p><a href="https://www.thebluealliance.com/team/4421" target="_blank">Forge Robotics Blue Alliance</a></p>
     </div>
   </section>
+
+  <div class="gallery">
+    <img src="https://codehs.com/uploads/e53ae46597cce6547ca55e7a3c3c3ccd" alt="2012 Einstein Run">
+    <img src="robot pics/4421 2022 Champs.jpg" alt="Regional Win 2015">
+    <img src="robot pics/ATA 4334 2018 Clawboy.jpg" alt="Drive Team">
+    <img src="robot pics/ATA 4334 2019 Neutrino.jpg" alt="Robot Showcase">
+  </div>
 
   <footer>
     <p>&copy; 2025 Forge Robotics | info@ataarobotics.ca</p>
