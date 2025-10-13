@@ -43,15 +43,23 @@
   </style>
 </head>
 <body>
-  <!-- Shared nav will load here -->
-  <div id="navbar"></div>
-  <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+ <header>
+  <div class="header-container">
+    <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo" />
+    <div class="banner">Welcome to ATAA Robotics</div>
+  </div>
+</header>
+
+<!-- Shared nav -->
+<div id="navbar"></div>
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
+
 
   <main class="container">
     <section class="intro-video">
