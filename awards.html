@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <title>FORGE 4421 – Awards</title>
   <link rel="stylesheet" href="ataaStyles.css" />
   <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
     .blue-link-box {
       background-color: #007aff;
       padding: 1rem;
@@ -32,60 +37,13 @@
       color: #ff4a4a;
     }
 
-    nav.teams-bar {
-      background-color: #1f1f1f;
-      padding: 0.5rem 2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      background-color: #ff4a4a;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 180px;
-      z-index: 1;
-      flex-direction: column;
-      padding: 0.5rem;
-      border-radius: 6px;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
-
-    .dropdown-content a {
-      padding: 0.4rem 0.6rem;
-    }
-
     header .header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
       flex-wrap: wrap;
+      background-color: black;
     }
 
     .logo {
@@ -105,54 +63,42 @@
       color: #bbb;
       margin-top: 3rem;
     }
+
+    .awards-container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff4a4a;
+    }
   </style>
 </head>
 <body>
+ 
   <header>
     <div class="header-container">
       <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" class="logo">
       <div class="banner">FORGE 4421 – Awards</div>
     </div>
-    <nav class="teams-bar">
-      <div class="nav-links">
-        <div class="dropdown">
-          <a href="index.html">Home</a>
-          <div class="dropdown-content">
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#frc">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html">Robots</a>
-            <a href="awards.html" class="active">Awards</a>
-            <a href="legacy.html">Legacy</a>
-             <a href="media.html">Media</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#ftc">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
   </header>
 
+ 
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <!-- Main Content -->
   <main class="awards-container">
     <h2>Our Achievements</h2>
+
     <div class="blue-link-box">
       <a href="https://www.thebluealliance.com/team/4421" target="_blank" rel="noopener noreferrer">
         View Full Team History on The Blue Alliance
