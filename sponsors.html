@@ -8,13 +8,13 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
+      background-color: #000;
       color: #eee;
       margin: 0;
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: #111;
     }
 
     .header-container {
@@ -32,10 +32,11 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 1.8rem;
       color: #ff4a4a;
+      margin-left: 10px;
     }
 
     .teams-bar {
-      background: #121212;
+      background: #000;
       padding: 10px 0;
     }
 
@@ -67,7 +68,7 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #1a1a1a;
+      background-color: #111;
       min-width: 160px;
       z-index: 1;
       flex-direction: column;
@@ -112,7 +113,7 @@
       box-shadow: 0 4px 12px rgba(255, 74, 74, 0.25);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: block;
-      background: #121212;
+      background: #000;
     }
 
     .sponsor-grid a img:hover {
@@ -142,7 +143,7 @@
     }
 
     footer {
-      background: #1a1a1a;
+      background: #111;
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
@@ -150,7 +151,7 @@
     }
 
     footer a {
-      color: #ff4a4a;
+      color: #4a90ff;
       text-decoration: none;
     }
 
@@ -164,46 +165,41 @@
 
   <header>
     <div class="header-container">
-   <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="ATAA Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">
-      ATAA – Event Countdown Clocks
+      <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="ATAA Logo" class="logo">
       <div class="banner">Sponsors</div>
-   <nav class="teams-bar">
-  <div class="nav-links">
-    <div class="dropdown">
-      <a href="index.html">Home</a>
-      <div class="dropdown-content">
-      </div>
     </div>
 
-    <div class="dropdown">
-      <a href="#frc">FRC - FORGE 4421</a>
-      <div class="dropdown-content">
-        <a href="team.html">About</a>
-        <a href="robots.html">Robots</a>
-        <a href="awards.html">Awards</a>
-        <a href="legacy.html">Legacy</a>
-        <a href="media.html">Media</a>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html" class="active">Sponsors</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="#ftc">FTC Teams</a>
-      <div class="dropdown-content">
-        <a href="hyperdroid.html">HyperDroid #10015</a>
-        <a href="cai.html">Crazy AI #16596</a>
-        <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-        <a href="techtitans.html">Tech Titans #23684</a>
-      </div>
-    </div>
-
-    <a href="fll.html">FLL Teams</a>
-    <a href="event.html">Events</a>
-    <a href="impact.html">Impact</a>
-    <a href="sponsors.html" class="active">Sponsors</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
     </nav>
   </header>
 
@@ -239,7 +235,10 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 ATAA Robotics | Contact us at 
+    <p>&copy; 2025 ATAA Robotics | 
+      <a href="https://forge4421.ca" target="_blank">FORGE 4421 Website</a> |
+      <a href="https://www.thebluealliance.com/team/16596" target="_blank">ATA Robotics (TBA)</a> |
+      <a href="https://www.thebluealliance.com/team/4334" target="_blank">SWAT Bots (TBA)</a> |
       <a href="mailto:info@ataarobotics.ca">info@ataarobotics.ca</a>
     </p>
   </footer>
