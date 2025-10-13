@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ATAA Events Countdown</title>
-  <link rel="stylesheet" href="ataaStyles.css">
+  <link rel="stylesheet" href="ataaStyles.css" />
   <style>
     body {
       background-color: #0f0f0f;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
       text-align: center;
     }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      font-family: 'Orbitron', sans-serif;
+      color: #ff4a4a;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .banner img {
+      height: 50px;
+    }
+
+    main {
+      text-align: center;
+      padding: 2rem 1rem 4rem;
+    }
+
     .countdown-section {
-      margin: 40px auto;
+      margin: 2rem auto;
       padding: 30px;
       background-color: #1c1c1c;
       border: 2px solid #ff4a4a;
@@ -21,28 +49,40 @@
       max-width: 600px;
       box-shadow: 0 0 20px rgba(255, 74, 74, 0.3);
     }
+
     h2 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 2rem;
       color: #ff4a4a;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
+
     .timer {
       font-size: 1.5rem;
       color: #eee;
     }
 
-    /* Nav bar dropdown styles */
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* Navigation bar styling */
     nav.teams-bar {
       background-color: #1f1f1f;
       padding: 0.5rem 2rem;
+      margin-top: 10px;
     }
+
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 1rem;
       justify-content: center;
+      gap: 1rem;
     }
+
     .nav-links a {
       color: white;
       text-decoration: none;
@@ -50,35 +90,40 @@
       border-radius: 6px;
       transition: background-color 0.3s ease;
     }
+
     .nav-links a:hover,
     .nav-links a.active {
       background-color: #ff4a4a;
       color: white;
     }
+
     .dropdown {
       position: relative;
     }
+
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #333;
       min-width: 180px;
       z-index: 1;
-      flex-direction: column;
-      padding: 0.5rem;
       border-radius: 6px;
+      padding: 0.5rem;
       top: 100%;
       left: 0;
     }
+
     .dropdown:hover .dropdown-content {
       display: flex;
       flex-direction: column;
     }
+
     .dropdown-content a {
       padding: 0.4rem 0.6rem;
       color: white;
       white-space: nowrap;
     }
+
     .dropdown-content a:hover {
       background-color: #ff4a4a;
     }
@@ -87,15 +132,14 @@
 <body>
   <header>
     <div class="banner">
-      <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="ATAA Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">
+      <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="ATAA Logo">
       ATAA – Event Countdown Clocks
     </div>
+
     <nav class="teams-bar">
       <div class="nav-links">
         <div class="dropdown">
           <a href="index.html">Home</a>
-          <div class="dropdown-content">
-          </div>
         </div>
 
         <div class="dropdown">
@@ -105,7 +149,7 @@
             <a href="robots.html">Robots</a>
             <a href="awards.html">Awards</a>
             <a href="legacy.html">Legacy</a>
-             <a href="media.html">Media</a>
+            <a href="media.html">Media</a>
           </div>
         </div>
 
@@ -159,6 +203,7 @@
     function startCountdown(id, dateStr) {
       const timerEl = document.getElementById(id);
       const targetDate = new Date(dateStr).getTime();
+
       const interval = setInterval(() => {
         const now = new Date().getTime();
         const diff = targetDate - now;
@@ -178,7 +223,6 @@
       }, 1000);
     }
 
-
     startCountdown("fll-timer", "2025-08-01T09:00:00");
     startCountdown("ftc-timer", "2025-09-07T10:00:00");
     startCountdown("frc-timer", "2026-01-04T10:00:00");
@@ -186,4 +230,3 @@
   </script>
 </body>
 </html>
-
