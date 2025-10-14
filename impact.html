@@ -5,157 +5,279 @@
   <link rel="stylesheet" href="ataaStyles.css" />
   <style>
     body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    header .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    header, footer {
+      background-color: #1f1f1f;
       padding: 1rem 2rem;
-      flex-wrap: wrap;
-      background-color: black;
-    }
-
-    .logo {
-      height: 60px;
+      text-align: center;
     }
 
     .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
       color: #ff4a4a;
+      font-size: 1.6rem;
+      font-weight: bold;
     }
 
-    footer {
+    .banner img {
+      height: 50px;
+    }
+
+    .impact-hero {
+      background: radial-gradient(circle at top left, #ff4a4a, #0f0f0f);
+      padding: 60px 20px;
       text-align: center;
-      padding: 1rem;
-      background-color: #1f1f1f;
-      color: #bbb;
-      margin-top: 3rem;
+      color: #fff;
     }
 
-    main {
-      max-width: 900px;
+    .impact-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .impact-hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 2rem;
-    }
-
-    h2 {
-      color: #ff4a4a;
-      text-align: center;
-    }
-
-    p {
-      line-height: 1.6;
+      color: #ddd;
     }
 
     .impact-section {
-      margin-bottom: 2rem;
-      background-color: #1c1c1c;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 2px solid #ff4a4a;
-      box-shadow: 0 0 15px rgba(255, 74, 74, 0.3);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px 10%;
+      align-items: center;
     }
 
-    .impact-section h3 {
+    .impact-section:nth-child(even) {
+      background: #1c1c1c;
+    }
+
+    .impact-text {
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    .impact-text h2 {
       color: #ff4a4a;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      margin-bottom: 15px;
     }
 
-    .blue-link-box {
-      background-color: #007aff;
-      padding: 1rem;
-      border-radius: 10px;
-      margin: 1.5rem 0;
+    .impact-text p {
+      font-size: 1rem;
+    }
+
+    .impact-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 74, 74, 0.3);
+    }
+
+    .quote-box {
+      background: #111;
+      padding: 40px 20px;
       text-align: center;
+      font-style: italic;
+      color: #ccc;
+      font-size: 1.2rem;
     }
 
-    .blue-link-box a {
+    .quote-box span {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ff4a4a;
+    }
+
+    @media (max-width: 768px) {
+      .impact-section {
+        grid-template-columns: 1fr;
+        padding: 30px 5%;
+      }
+    }
+
+    /* Navigation bar styling (new version) */
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+      margin-top: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
 
-    .blue-link-box a:hover {
-      text-decoration: underline;
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+      color: white;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1000;
+      border-radius: 6px;
+      padding: 0.5rem;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ff4a4a;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="header-container">
-      <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" class="logo">
-      <div class="banner">FORGE 4421 – Impact</div>
+    <div class="banner">
+      <img src="https://codehs.com/uploads/c955b193795ddf2a91d2c63df5920a9f" alt="FORGE Logo">
+      FORGE 4421 – Impact Award
     </div>
+
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html" class="active">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Navbar (Loaded dynamically) -->
-  <div id="navbar"></div>
-  <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+  <section class="impact-hero">
+    <h1>Making an Impact in Calgary and Beyond</h1>
+    <p>Forge Robotics 4421 is dedicated to more than just building robots—we build a better future through STEM advocacy, accessibility, and sustainable innovation.</p>
+  </section>
 
-  <!-- Main Content -->
-  <main>
-    <h2>Making a Difference Through Robotics</h2>
-
-    <div class="impact-section">
-      <h3>Community Outreach</h3>
-      <p>
-        FORGE 4421 is deeply rooted in community involvement. As a city-wide community robotics team, we unite students from various schools to promote STEM learning and collaboration. 
-        Through workshops, demonstrations, and partnerships, we share our passion for engineering and innovation with younger students and local organizations.
-      </p>
+  <section class="impact-section">
+    <div class="impact-img">
+      <img src="impact pics/img_6771.jpeg" alt="Outreach events photo">
     </div>
-
-    <div class="impact-section">
-      <h3>STEM Education & Mentorship</h3>
-      <p>
-        Our team dedicates significant time to mentoring younger teams in the FLL and FTC divisions, helping them develop technical skills and leadership abilities. 
-        We also organize events that introduce coding, design, and problem-solving to students across Alberta.
-      </p>
+    <div class="impact-text">
+      <h2>Reaching Over 800,000 Calgarians</h2>
+      <p>Through CTV interviews, Beakerhead exhibitions, cultural centre showcases, and local festivals, we’ve brought FIRST to over half of Calgary's population. Our mission is simple: make robotics familiar, fun, and accessible to everyone.</p>
     </div>
+  </section>
 
-    <div class="impact-section">
-      <h3>Equity & Inclusion</h3>
-      <p>
-        FORGE 4421 is committed to ensuring all youth—regardless of gender, background, or school—have equal access to robotics and STEM opportunities. 
-        We’re proud to foster a diverse environment where creativity, teamwork, and innovation thrive together.
-      </p>
+  <section class="impact-section">
+    <div class="impact-text">
+      <h2>Expanding Access Through Camps and Partnerships</h2>
+      <p>Forge is committed to making STEM accessible for every community. We’ve run engaging summer camps that spark curiosity in robotics and coding. This year, we’re proud to partner with <strong>IndigiTEAM</strong> to deliver a camp tailored for Indigenous families, ensuring representation and inclusion in STEM education.</p>
+      <p>With support from <strong>FIRST Canada</strong> grants, these programs are funded and sustainable, giving more youth the opportunity to discover their potential through innovation and teamwork.</p>
     </div>
-
-    <div class="impact-section">
-      <h3>Global Inspiration</h3>
-      <p>
-        Competing internationally allows us to represent Alberta’s innovation on a global stage. 
-        We strive not only to build competitive robots but also to build connections, share ideas, and inspire others to pursue careers in science and technology.
-      </p>
+    <div class="impact-img">
+      <img src="impact pics/Screen Shot 2025-09-25 at 11.42.50 PM.png" alt="Summer camp robotics activity">
     </div>
+  </section>
 
-    <div class="blue-link-box">
-      <a href="https://www.thebluealliance.com/team/4421" target="_blank" rel="noopener noreferrer">
-        View Full Team History on The Blue Alliance
-      </a>
+  <section class="impact-section">
+    <div class="impact-img">
+      <img src="impact pics/IMG_1899.jpg" alt="Toy adaptation photo">
     </div>
-  </main>
+    <div class="impact-text">
+      <h2>Adapting Toys for Kids With Disabilities</h2>
+      <p>We partnered with Renfrew Educational Services to adapt over 48 toys, saving families $7,000–10,000. Using basic engineering skills, 3D printing, and soldering, we made playtime more inclusive and joyful.</p>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <section class="impact-section">
+    <div class="impact-text">
+      <h2>Systems Change Through Advocacy</h2>
+      <p>In 2024, we co-wrote and submitted a report proposing a universal points system to FIRST HQ, the Advisory Board, and Colin Fultz. Now, it's influencing policy changes for 87,000 students worldwide starting in 2026.</p>
+    </div>
+    <div class="impact-img">
+      <img src="impact pics/IMG_5680.png" alt="Team presenting">
+    </div>
+  </section>
+
+  <section class="impact-section">
+    <div class="impact-img">
+      <img src="impact pics/unnamed copy.jpeg" alt="Girls in STEM">
+    </div>
+    <div class="impact-text">
+      <h2>Championing Girls in STEM</h2>
+      <p>From training female mentors to leading all-girls coding camps and CNC workshops, Forge is actively working to reduce gender gaps in engineering and robotics through inclusion and empowerment.</p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
     <p>Payment Email for Donations: payment@ataarobotics.ca</p>
   </footer>
-
 </body>
 </html>
