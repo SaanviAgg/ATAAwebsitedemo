@@ -14,11 +14,13 @@
       background-color: #000;
       color: white;
     }
+
     header {
       background-color: #111;
       color: white;
       padding-bottom: 0.5rem;
     }
+
     .header-container {
       display: flex;
       align-items: center;
@@ -26,53 +28,15 @@
       padding: 1rem 2rem;
       flex-wrap: wrap;
     }
+
     .logo {
       height: 60px;
     }
+
     .banner {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       color: #ff4a4a;
-    }
-    nav.teams-bar {
-      background-color: #1f1f1f;
-      padding: 0.5rem 2rem;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-    .nav-links a:hover,
-    .nav-links a.active {
-      background-color: #ff4a4a;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 180px;
-      z-index: 1;
-      flex-direction: column;
-      padding: 0.5rem;
-      border-radius: 6px;
-    }
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
-    .dropdown-content a {
-      padding: 0.4rem 0.6rem;
     }
 
     /* Timeline container and line */
@@ -82,6 +46,7 @@
       margin: 3rem auto;
       padding: 2rem 0;
     }
+
     .timeline::after {
       content: '';
       position: absolute;
@@ -102,6 +67,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
       margin: 2rem 0;
     }
+
     .timeline-entry::before {
       content: '';
       position: absolute;
@@ -113,15 +79,19 @@
       border: 3px solid #fff;
       z-index: 1;
     }
+
     .left {
       left: 0;
     }
+
     .right {
       left: 55%;
     }
+
     .left::before {
       right: -16px;
     }
+
     .right::before {
       left: -16px;
     }
@@ -131,13 +101,16 @@
       color: #b33951;
       margin-top: 0;
     }
+
     .timeline-entry p {
       line-height: 1.6;
     }
+
     a {
       color: #1e90ff;
       text-decoration: underline;
     }
+
     a:hover {
       text-decoration: none;
     }
@@ -151,6 +124,7 @@
       gap: 1rem;
       padding: 0 2rem;
     }
+
     .gallery img {
       width: 100%;
       height: auto;
@@ -158,6 +132,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
       transition: transform 0.3s;
     }
+
     .gallery img:hover {
       transform: scale(1.05);
     }
@@ -174,11 +149,13 @@
       .timeline::after {
         left: 20px;
       }
+
       .timeline-entry {
         width: 90%;
         left: 0 !important;
         margin-left: 40px;
       }
+
       .timeline-entry::before {
         left: -32px;
       }
@@ -192,38 +169,17 @@
       <img src="logos/IMG_1079.JPG" alt="ATAA Logo" class="logo">
       <div class="banner">Legacy of Forge Robotics</div>
     </div>
-    <nav class="teams-bar">
-      <div class="nav-links">
-        <div class="dropdown">
-          <a href="index.html">Home</a>
-        </div>
-        <div class="dropdown">
-          <a href="#frc">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html">Robots</a>
-            <a href="awards.html">Awards</a>
-            <a href="legacy.html" class="active">Legacy</a>
-            <a href="media.html">Media</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="#ftc">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
   </header>
+
+  <!-- New Shared Navbar Include -->
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
   <section class="timeline">
     <div class="timeline-entry left">
