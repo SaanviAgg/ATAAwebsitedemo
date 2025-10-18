@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sponsors | Forge Robotics</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ataaStyles.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -14,93 +15,6 @@
       color: white;
     }
 
-    header {
-      background-color: #111;
-      color: white;
-      padding-bottom: 0.5rem;
-    }
-
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      height: 60px;
-    }
-
-    .banner {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #ff4a4a;
-    }
-
-    /* Navbar */
-    nav {
-      background-color: #000;
-      padding: 0.5rem 0;
-      text-align: center;
-    }
-
-    .nav-links {
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.2rem;
-    }
-
-    .nav-links > a,
-    .dropdown > a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 0.8rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links > a:hover,
-    .dropdown > a:hover {
-      color: #ff4a4a;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #111;
-      top: 100%;
-      left: 0;
-      z-index: 10;
-      flex-direction: column;
-      border-radius: 8px;
-      overflow: hidden;
-      min-width: 160px;
-    }
-
-    .dropdown-content a {
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1rem;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #222;
-      color: #ff4a4a;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
-
-    /* Sponsor grid */
     main {
       max-width: 1200px;
       margin: 50px auto;
@@ -149,42 +63,6 @@
     .thank-you a:hover {
       text-decoration: underline;
     }
-
-    footer {
-      background: #111;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 40px;
-      color: #bbb;
-    }
-
-    footer a {
-      color: #4a90ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 768px) {
-      .dropdown-content {
-        position: static;
-        background: #111;
-        border-radius: 0;
-        box-shadow: none;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .dropdown-content a {
-        text-align: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -194,40 +72,44 @@
       <img src="logos/IMG_1079.JPG" alt="ATAA Logo" class="logo">
       <div class="banner">Sponsors</div>
     </div>
-
-    <nav>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-
-        <div class="dropdown">
-          <a href="#">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html">Robots</a>
-            <a href="awards.html">Awards</a>
-            <a href="legacy.html">Legacy</a>
-            <a href="media.html">Media</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html" class="active">Sponsors</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
   </header>
+
+  <!-- NAVBAR FROM INDEX PAGE -->
+  <nav class="teams-bar">
+    <div class="nav-links">
+      <div class="dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown-content"></div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#frc">FRC - FORGE 4421</a>
+        <div class="dropdown-content">
+          <a href="team.html">About</a>
+          <a href="robots.html">Robots</a>
+          <a href="awards.html">Awards</a>
+          <a href="legacy.html">Legacy</a>
+          <a href="media.html">Media</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#ftc">FTC Teams</a>
+        <div class="dropdown-content">
+          <a href="hyperdroid.html">HyperDroid #10015</a>
+          <a href="cai.html">Crazy AI #16596</a>
+          <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+          <a href="techtitans.html">Tech Titans #23684</a>
+        </div>
+      </div>
+
+      <a href="fll.html">FLL Teams</a>
+      <a href="event.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="sponsors.html" class="active">Sponsors</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
   <main>
     <div class="sponsor-grid">
