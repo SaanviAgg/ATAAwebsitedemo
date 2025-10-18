@@ -13,6 +13,7 @@
       padding: 0;
       background-color: #000;
       color: white;
+      overflow-x: hidden;
     }
 
     header {
@@ -39,89 +40,122 @@
       color: #ff4a4a;
     }
 
-    /* Timeline container and line */
+    
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #111;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+      min-width: 180px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav ul li ul li {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    nav ul li ul li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #ff4a4a;
+    }
+
+    /* ----------------------------- */
+    /* Vertical Timeline             */
+    /* ----------------------------- */
     .timeline {
       position: relative;
       max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem 0;
+      margin: 4rem auto;
+      padding: 0 2rem;
     }
 
-    .timeline::after {
+    .timeline::before {
       content: '';
       position: absolute;
-      width: 4px;
-      background-color: #ff4a4a;
-      top: 0;
-      bottom: 0;
       left: 50%;
-      margin-left: -2px;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #ff4a4a, #b33951);
+      border-radius: 2px;
     }
 
     .timeline-entry {
-      padding: 1.5rem 2rem;
       position: relative;
+      width: 100%;
       background-color: #111;
-      border-radius: 12px;
-      width: 45%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-      margin: 2rem 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+      margin: 3rem 0;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-entry:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(255, 74, 74, 0.3);
     }
 
     .timeline-entry::before {
       content: '';
       position: absolute;
-      top: 20px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
       background-color: #ff4a4a;
       border: 3px solid #fff;
-      z-index: 1;
-    }
-
-    .left {
-      left: 0;
-    }
-
-    .right {
-      left: 55%;
-    }
-
-    .left::before {
-      right: -16px;
-    }
-
-    .right::before {
-      left: -16px;
+      border-radius: 50%;
+      z-index: 2;
     }
 
     .timeline-entry h2 {
       font-family: 'Playfair Display', serif;
-      color: #b33951;
-      margin-top: 0;
+      font-size: 1.6rem;
+      color: #ff4a4a;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
 
     .timeline-entry p {
-      line-height: 1.6;
+      line-height: 1.7;
+      text-align: center;
+      color: #ddd;
     }
 
-    a {
+    .timeline-entry a {
       color: #1e90ff;
       text-decoration: underline;
     }
 
-    a:hover {
+    .timeline-entry a:hover {
       text-decoration: none;
+      color: #ff4a4a;
     }
 
-    /* Gallery (outside timeline) */
+   
     .gallery {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto 4rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 0 2rem;
     }
 
@@ -143,21 +177,29 @@
       background-color: #1f1f1f;
       color: #bbb;
       margin-top: 2rem;
+      font-size: 0.9rem;
     }
 
     @media screen and (max-width: 768px) {
-      .timeline::after {
-        left: 20px;
+      .timeline::before {
+        left: 10px;
       }
 
       .timeline-entry {
-        width: 90%;
-        left: 0 !important;
-        margin-left: 40px;
+        padding: 1.5rem;
       }
 
       .timeline-entry::before {
-        left: -32px;
+        left: 10px;
+        transform: none;
+      }
+
+      .timeline-entry h2 {
+        text-align: left;
+      }
+
+      .timeline-entry p {
+        text-align: left;
       }
     }
   </style>
@@ -171,7 +213,7 @@
     </div>
   </header>
 
-  <!-- New Shared Navbar Include -->
+  
   <div id="navbar"></div>
   <script>
     fetch('nav.html')
@@ -181,26 +223,28 @@
       });
   </script>
 
+  <!-- Vertical Timeline -->
   <section class="timeline">
-    <div class="timeline-entry left">
+    <div class="timeline-entry">
       <h2>Alberta Tech Alliance (Team 4334)</h2>
       <p>Founded in 2012, Alberta Tech Alliance quickly established itself as a formidable presence in the FRC community. In their rookie year, they achieved the remarkable feat of reaching the Einstein field at the World Championship, setting a high standard for excellence. Over the years, ATA has garnered numerous accolades, including multiple regional wins and prestigious awards such as the Woodie Flowers Finalist Award and the Judges' Award. Their dedication to innovation and mentorship has made them a cornerstone of Calgary's robotics community.</p>
       <p><a href="https://www.4334.ca/" target="_blank">Team 4334 Website</a> | <a href="https://www.thebluealliance.com/team/4334" target="_blank">ATA Blue Alliance</a></p>
     </div>
 
-    <div class="timeline-entry right">
+    <div class="timeline-entry">
       <h2>SWAT Bots Robotics (Team 5015)</h2>
       <p>Established in 2014, SWAT Bots Robotics made an immediate impact by earning the Rookie All-Star Award at the Western Canada Regional. Their journey continued with significant achievements, including being selected as an alliance captain at the 2019 FIRST Championship in Houston. Their robot, "Warthog," became a symbol of their engineering prowess and teamwork. Throughout their seasons, SWAT Bots have been recognized for their commitment to excellence and have inspired many with their journey from rookies to world-class competitors.</p>
       <p><a href="https://www.thebluealliance.com/team/5015" target="_blank">SWAT Bots Blue Alliance</a></p>
     </div>
 
-    <div class="timeline-entry left">
+    <div class="timeline-entry">
       <h2>The Formation of Forge Robotics (Team 4421)</h2>
       <p>In 2021, recognizing the potential for greater impact through collaboration, ATA and SWAT Bots merged to form Forge Robotics (Team 4421). This fusion brought together the strengths of both teams: ATA's legacy of innovation and mentorship, and SWAT Bots' dynamic engineering and competition experience. Together, Forge Robotics aims to push the boundaries of what is possible in robotics, fostering a culture of learning, resilience, and community engagement.</p>
       <p><a href="https://www.thebluealliance.com/team/4421" target="_blank">Forge Robotics Blue Alliance</a></p>
     </div>
   </section>
 
+  
   <div class="gallery">
     <img src="https://codehs.com/uploads/e53ae46597cce6547ca55e7a3c3c3ccd" alt="2012 Einstein Run">
     <img src="robot pics/4421 2022 Champs.jpg" alt="Regional Win 2015">
