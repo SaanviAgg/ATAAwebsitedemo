@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0f0f0f;
   color: #eee;
   line-height: 1.6;
@@ -38,7 +38,7 @@ header {
   color: #ff4a4a;
   font-weight: bold;
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* === Nav Bar (Consistent Across All Pages) === */
@@ -61,7 +61,7 @@ nav {
 nav a,
 .dropdown > a,
 .dropdown-content a {
-  font-family: 'Orbitron', sans-serif !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   font-size: 16px !important;
   line-height: 1.2 !important;
   color: white;
@@ -149,7 +149,7 @@ section {
 /* === Typography === */
 h2, h3 {
   color: #ff4a4a;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* === Video === */
