@@ -63,6 +63,81 @@
     .thank-you a:hover {
       text-decoration: underline;
     }
+
+    /* Nav styling copied from robots.html */
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+    }
+
+    header .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .banner {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #ff4a4a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      color: #bbb;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
@@ -74,7 +149,6 @@
     </div>
   </header>
 
- 
   <nav class="teams-bar">
     <div class="nav-links">
       <div class="dropdown">
