@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Legacy | Forge Robotics</title>
   <link rel="stylesheet" href="ataaStyles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -14,12 +14,11 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    header {
-      background-color: black;
-      padding: 1rem 2rem;
+    header .header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 1rem 2rem;
       flex-wrap: wrap;
     }
 
@@ -28,11 +27,57 @@
     }
 
     .banner {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.8rem;
       color: #ff4a4a;
-      text-align: center;
-      flex: 1;
+    }
+
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
     }
 
     /* Timeline styling */
@@ -113,28 +158,46 @@
 
 <body>
   <header>
-    <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo" />
-    <div class="banner">Legacy of Forge Robotics</div>
-  </header>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">About</a>
-        <div class="dropdown-content">
-          <a href="legacy.html">Legacy</a>
-          <a href="awards.html">Awards</a>
-          <a href="sponsors.html">Sponsors</a>
+    <div class="header-container">
+      <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo" />
+      <div class="banner">Legacy of Forge Robotics</div>
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-content"></div>
         </div>
-      </li>
-      <li><a href="robot.html">Robot</a></li>
-      <li><a href="outreach.html">Outreach</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html" class="active">Legacy</a>
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
   <!-- Timeline Section -->
   <section class="timeline">
