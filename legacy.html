@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legacy | Forge Robotics</title>
+  <title>FORGE 4421 – Awards</title>
   <link rel="stylesheet" href="ataaStyles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
-      background-color: black;
+      background-color: #000;
       color: white;
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
+      margin: 0;
     }
 
     header {
@@ -28,104 +28,151 @@
     }
 
     .banner {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.8rem;
       color: #ff4a4a;
       text-align: center;
       flex: 1;
     }
 
-    /* Timeline styling */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 1000px;
-      margin: 3rem auto;
-      gap: 2rem;
-      padding: 0 1rem;
+    /* Navbar */
+    nav.navbar {
+      background-color: #1f1f1f;
     }
 
-    .timeline-entry {
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      border-radius: 6px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem 0;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 0.5rem 0.8rem;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ff4a4a;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    main.awards-container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff4a4a;
+      margin-bottom: 2rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .award-card {
       background-color: #1a1a1a;
-      padding: 1.5rem;
-      border-left: 6px solid #ff4a4a;
       border-radius: 10px;
-      width: 100%;
-      box-shadow: 0 0 10px rgba(255, 74, 74, 0.2);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       transition: transform 0.3s ease;
     }
 
-    .timeline-entry:hover {
-      transform: scale(1.02);
+    .award-card:hover {
+      transform: translateY(-5px);
     }
 
-    .timeline-entry h2 {
+    .award-card h3 {
       color: #ff4a4a;
-      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
     }
 
-    .timeline-entry p {
-      line-height: 1.6;
-      color: #ddd;
+    .award-details p {
+      margin: 0.3rem 0;
     }
 
-    .timeline-entry a {
-      color: #ff4a4a;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .timeline-entry a:hover {
-      text-decoration: underline;
-    }
-
-    /* Gallery styling */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 1rem;
-    }
-
-    .gallery img {
-      width: 100%;
+    .blue-link-box {
+      background-color: #007aff;
+      padding: 1rem;
       border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      margin: 1.5rem 0;
+      text-align: center;
     }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255, 74, 74, 0.3);
+    .blue-link-box a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .blue-link-box a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
+      padding: 1rem;
       background-color: #1f1f1f;
-      padding: 1.5rem;
       color: #bbb;
-      font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo" />
-    <div class="banner">Legacy of Forge Robotics</div>
+    <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" class="logo" />
+    <div class="banner">FORGE 4421 – Awards</div>
   </header>
 
-  <!-- Navbar -->
+  <!-- Legacy-style Navbar -->
   <nav class="navbar">
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
-        <a href="#" class="dropbtn">About</a>
+        <a href="#" class="dropbtn active">About</a>
         <div class="dropdown-content">
           <a href="legacy.html">Legacy</a>
-          <a href="awards.html">Awards</a>
+          <a href="awards.html" class="active">Awards</a>
           <a href="sponsors.html">Sponsors</a>
         </div>
       </li>
@@ -136,37 +183,85 @@
     </ul>
   </nav>
 
+  <main class="awards-container">
+    <h2>Our Achievements</h2>
 
-  <section class="timeline">
-    <div class="timeline-entry">
-      <h2>Alberta Tech Alliance (Team 4334)</h2>
-      <p>Founded in 2012, Alberta Tech Alliance quickly established itself as a formidable presence in the FRC community. In their rookie year, they achieved the remarkable feat of reaching the Einstein field at the World Championship, setting a high standard for excellence. Over the years, ATA has garnered numerous accolades, including multiple regional wins and prestigious awards such as the Woodie Flowers Finalist Award and the Judges' Award. Their dedication to innovation and mentorship has made them a cornerstone of Calgary's robotics community.</p>
-      <p><a href="https://www.4334.ca/" target="_blank">Team 4334 Website</a> | <a href="https://www.thebluealliance.com/team/4334" target="_blank">ATA Blue Alliance</a></p>
+    <div class="blue-link-box">
+      <a href="https://www.thebluealliance.com/team/4421" target="_blank" rel="noopener noreferrer">
+        View Full Team History on The Blue Alliance
+      </a>
     </div>
 
-    <div class="timeline-entry">
-      <h2>SWAT Bots Robotics (Team 5015)</h2>
-      <p>Established in 2014, SWAT Bots Robotics made an immediate impact by earning the Rookie All-Star Award at the Western Canada Regional. Their journey continued with significant achievements, including being selected as an alliance captain at the 2019 FIRST Championship in Houston. Their robot, "Warthog," became a symbol of their engineering prowess and teamwork. Throughout their seasons, SWAT Bots have been recognized for their commitment to excellence and have inspired many with their journey from rookies to world-class competitors.</p>
-      <p><a href="https://www.thebluealliance.com/team/5015" target="_blank">SWAT Bots Blue Alliance</a></p>
+    <!-- 2025 -->
+    <div class="award-card">
+      <h3>2025 – Canadian Pacific Regional</h3>
+      <div class="award-details">
+        <p><strong>Award:</strong> Gracious Professionalism Award</p>
+        <p><strong>Rank:</strong> 12th | <strong>Record:</strong> 8–5–1</p>
+        <p><strong>Alliance:</strong> Captain of Alliance 8</p>
+        <p><strong>Championships:</strong> Qualified for Worlds</p>
+      </div>
     </div>
 
-    <div class="timeline-entry">
-      <h2>The Formation of Forge Robotics (Team 4421)</h2>
-      <p>In 2021, recognizing the potential for greater impact through collaboration, ATA and SWAT Bots merged to form Forge Robotics (Team 4421). This fusion brought together the strengths of both teams: ATA's legacy of innovation and mentorship, and SWAT Bots' dynamic engineering and competition experience. Together, Forge Robotics aims to push the boundaries of what is possible in robotics, fostering a culture of learning, resilience, and community engagement.</p>
-      <p><a href="https://www.thebluealliance.com/team/4421" target="_blank">Forge Robotics Blue Alliance</a></p>
+    <div class="award-card">
+      <h3>2025 – Las Vegas Regional</h3>
+      <div class="award-details">
+        <p><strong>Award:</strong> Team Spirit Award</p>
+        <p><strong>Rank:</strong> 16th | <strong>Record:</strong> 7–6–0</p>
+        <p><strong>Alliance:</strong> Semifinalist – Alliance 5</p>
+        <p><strong>Note:</strong> Second consecutive year earning awards at Vegas.</p>
+      </div>
     </div>
-  </section>
 
-  
-  <div class="gallery">
-    <img src="https://codehs.com/uploads/e53ae46597cce6547ca55e7a3c3c3ccd" alt="2012 Einstein Run">
-    <img src="robot pics/4421 2022 Champs.jpg" alt="4421 at Champs">
-    <img src="robot pics/ATA 4334 2018 Clawboy.jpg" alt="ATA 2018 Clawboy">
-    <img src="robot pics/ATA 4334 2019 Neutrino.jpg" alt="ATA 2019 Neutrino">
-  </div>
+    <div class="award-card">
+      <h3>2025 – FIRST Championship (Houston)</h3>
+      <div class="award-details">
+        <p><strong>Division:</strong> Galileo</p>
+        <p><strong>Placement:</strong> 35th overall</p>
+        <p><strong>Highlights:</strong> Top 30 team in Canada; outstanding autonomous consistency and pit professionalism.</p>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="award-card">
+      <h3>2024 – Canadian Pacific Regional</h3>
+      <div class="award-details">
+        <p><strong>Award:</strong> Quality Award</p>
+        <p><strong>Result:</strong> Finalist | <strong>Alliance:</strong> Captain of Alliance 2</p>
+        <p><strong>Record:</strong> 11–4–0</p>
+      </div>
+    </div>
+
+    <div class="award-card">
+      <h3>2024 – Las Vegas Regional</h3>
+      <div class="award-details">
+        <p><strong>Award:</strong> Innovation in Control Award</p>
+        <p><strong>Placement:</strong> Quarterfinalist</p>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="award-card">
+      <h3>2023 – Canadian Pacific Regional</h3>
+      <div class="award-details">
+        <p><strong>Result:</strong> 5th seed | <strong>Alliance:</strong> Semifinalist</p>
+        <p><strong>Highlights:</strong> Highest offensive power rating in ATAA history at the time.</p>
+      </div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="award-card">
+      <h3>2022 – Canadian Pacific Regional</h3>
+      <div class="award-details">
+        <p><strong>Award:</strong> Innovation in Control Award</p>
+        <p><strong>Championships:</strong> Qualified for FIRST Worlds</p>
+        <p><strong>Highlights:</strong> Finalist and recognized for exceptional control systems and swerve drive design.</p>
+      </div>
+    </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Forge Robotics | info@ataarobotics.ca</p>
+    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
     <p>Payment Email for Donations: payment@ataarobotics.ca</p>
   </footer>
 </body>
