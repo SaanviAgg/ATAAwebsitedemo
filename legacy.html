@@ -118,16 +118,25 @@
   </header>
 
   <!-- Navbar -->
-  <div id="navbar"></div>
-  <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">About</a>
+        <div class="dropdown-content">
+          <a href="legacy.html">Legacy</a>
+          <a href="awards.html">Awards</a>
+          <a href="sponsors.html">Sponsors</a>
+        </div>
+      </li>
+      <li><a href="robot.html">Robot</a></li>
+      <li><a href="outreach.html">Outreach</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Timeline Section -->
+
   <section class="timeline">
     <div class="timeline-entry">
       <h2>Alberta Tech Alliance (Team 4334)</h2>
@@ -148,7 +157,7 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
+  
   <div class="gallery">
     <img src="https://codehs.com/uploads/e53ae46597cce6547ca55e7a3c3c3ccd" alt="2012 Einstein Run">
     <img src="robot pics/4421 2022 Champs.jpg" alt="4421 at Champs">
