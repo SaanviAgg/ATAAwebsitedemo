@@ -1,4 +1,4 @@
-/* === Global Reset & Base Styles === */
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* === Nav Bar (Consistent Across All Pages) === */
+
 nav {
   background-color: #222;
   display: flex;
@@ -161,7 +161,7 @@ video {
   border-radius: 10px;
 }
 
-/* === CTA Buttons === */
+
 .call-to-action {
   display: flex;
   justify-content: center;
@@ -193,7 +193,7 @@ footer {
   border-top: 2px solid #ff4a4a;
 }
 
-/* === Awards Section === */
+
 .awards-container {
   max-width: 1000px;
   margin: 60px auto;
@@ -249,7 +249,7 @@ footer {
   line-height: 1.6;
 }
 
-/* === Robots Page Cards === */
+
 .robots-page {
   padding: 40px;
   max-width: 1200px;
