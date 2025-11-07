@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #121212;
@@ -81,7 +80,6 @@
       background-color: #ff4a4a;
     }
 
-    
     main {
       max-width: 1200px;
       margin: 2rem auto;
@@ -212,41 +210,17 @@
       <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" style="height: 40px;">
       <div class="banner">FORGE 4421 – Our Robots</div>
     </div>
-    <nav class="teams-bar">
-      <div class="nav-links">
-        <div class="dropdown">
-          <a href="index.html">Home</a>
-        </div>
-
-        <div class="dropdown">
-          <a href="#frc">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html" class="active">Robots</a>
-            <a href="awards.html">Awards</a>
-            <a href="legacy.html">Legacy</a>
-            <a href="media.html">Media</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#ftc">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
   </header>
+
+  <!-- ✅ FIX: use nav.html fetch so links work consistently -->
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
   <main>
     <h2>Meet Our Robots</h2>
@@ -275,8 +249,6 @@
           </div>
         </div>
       </div>
-
-    
     </div>
 
     <section class="video-section">
