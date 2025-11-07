@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us – ATAA Robotics</title>
+  <title>FORGE 4421 – Our Robots</title>
   <link rel="stylesheet" href="ataaStyles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
   <style>
+    /* --- Base Theme --- */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #121212;
@@ -33,6 +35,7 @@
       color: #ff4a4a;
     }
 
+    /* --- Navbar --- */
     nav.teams-bar {
       background-color: #1f1f1f;
       padding: 0.5rem 2rem;
@@ -78,82 +81,148 @@
       background-color: #ff4a4a;
     }
 
+    /* --- Robots Page --- */
     main {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 1rem;
-      color: #ff4a4a;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .about-section {
-      background: #1a1a1a;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 74, 74, 0.15);
-    }
-
-    .about-section p {
-      line-height: 1.7;
       margin-bottom: 1.5rem;
-      font-size: 1.05rem;
+      color: #ff4a4a;
+      font-family: 'Orbitron', sans-serif;
     }
 
-    .goals-list {
-      margin-left: 1rem;
-      padding-left: 1rem;
-      border-left: 3px solid #ff4a4a;
+    .robots-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 2rem;
     }
 
-    .video-section {
-      margin-top: 3rem;
+    .robot-flip-card {
+      width: 320px;
+      height: 580px;
+      perspective: 1200px;
+    }
+
+    .robot-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .robot-flip-card:hover .robot-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .robot-flip-front,
+    .robot-flip-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .robot-flip-front {
+      background: #000;
+    }
+
+    .robot-flip-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .robot-front-labels {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
       text-align: center;
+      padding: 8px 0;
     }
 
-    .video-section h2 {
-      margin-bottom: 1rem;
+    .robot-name {
+      font-size: 22px;
       font-family: 'Orbitron', sans-serif;
       color: #ff4a4a;
     }
 
-    .video-section video {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(255, 74, 74, 0.25);
+    .robot-year {
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .robot-flip-back {
+      background-color: #1c1c1c;
+      color: #fff;
+      transform: rotateY(180deg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .robot-desc {
+      line-height: 1.5;
+      font-size: 0.95rem;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    .robot-links a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .robot-links a:hover {
+      background-color: #0056b3;
     }
 
     footer p {
+      text-align: center;
       margin: 0.5rem 0;
       font-size: 0.9rem;
       color: #bbb;
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="header-container">
       <img src="https://codehs.com/uploads/5c8f76ee85c4c3bc2cb6a913abd79756" alt="FORGE Logo" style="height: 40px;">
-      <div class="banner">ATAA Robotics – About Us</div>
+      <div class="banner">FORGE 4421 – Our Robots</div>
     </div>
     <nav class="teams-bar">
       <div class="nav-links">
         <div class="dropdown">
           <a href="index.html">Home</a>
-          <div class="dropdown-content">
-          </div>
         </div>
 
         <div class="dropdown">
           <a href="#frc">FRC - FORGE 4421</a>
           <div class="dropdown-content">
-            <a href="team.html" class="active">About</a>
-            <a href="robots.html">Robots</a>
+            <a href="team.html">About</a>
+            <a href="robots.html" class="active">Robots</a>
             <a href="awards.html">Awards</a>
             <a href="legacy.html">Legacy</a>
             <a href="media.html">Media</a>
@@ -180,18 +249,34 @@
   </header>
 
   <main>
-    <h2>Who We Are?</h2></h2>
-    <div class="about-section">
-      <p><strong>About Us:</strong> At Forge Robotics, FRC Team 4421, our students are driven by the core values of FIRST — innovation, teamwork, and a commitment to learning. Both on and off the field, we strive to grow as individuals and as a team, empowering each other to think creatively, act with integrity, and lead with purpose.
+    <h2>Meet Our Robots</h2>
 
-Forge Robotics provides students with the opportunity to explore science, technology, engineering, and math (STEM) in meaningful, hands-on ways throughout the year. Our team is made up of dedicated, skilled, and passionate members who push themselves and one another to continually improve. We believe that true innovation comes from a mindset of resilience — one that embraces challenges, learns from failure, and is always ready to try again.
-
-Over the past few seasons, our hard work has paid off. In 2022 we were on the Winning Alliance at Canadian Pacific Regional and qualified for World Championships. In 2023, we ranked within the top 22% of FRC teams globally. By 2024, we climbed into the top 10% worldwide. That same year, we also rose from the top 22% of Canadian teams to an impressive 11%, marking a significant leap in our national performance. In 2025 we again qualified for World Championships through the new Regional Advancement System that rewarded our event performance and awards</p>
-
-      <p><strong>Beyond:</strong> Beyond robotics, we focus on teamwork, leadership, and giving back—mentoring younger teams and helping grow Calgary’s STEM community. Forge 4421 is proud to unite young innovators from across the city, building not just robots, but future leaders.</p>
-
-    
+    <div class="robots-container">
+      <!-- Example Robot Card: LOKI -->
+      <div class="robot-flip-card">
+        <div class="robot-flip-inner">
+          <div class="robot-flip-front">
+            <img src="https://codehs.com/uploads/f16912333fe65d4345e0a935c2f0f134" alt="LOKI 2025">
+            <div class="robot-front-labels">
+              <div class="robot-name">LOKI</div>
+              <div class="robot-year">2024–2025</div>
+            </div>
+          </div>
+          <div class="robot-flip-back">
+            <div class="robot-desc">
+              <strong>Game:</strong> Reefscape — stacking pipes and climbing a cage in endgame.  
+              <strong>Key Features:</strong> Elevator for scoring, pivot arm for algae, rapid endgame climb.  
+              <strong>Awards:</strong> Gracious Professionalism, Team Spirit, Vegas Semifinalist, Worlds Qualifier.  
+              <strong>Fun Fact:</strong> Named for a mechanism resembling Loki’s horns!
+            </div>
+            <div class="robot-links">
+              <a href="https://www.thebluealliance.com/team/4421/2025" target="_blank">Blue Alliance</a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Add the rest of your robots below the same way -->
     </div>
 
     <section class="video-section">
