@@ -10,51 +10,45 @@
       overflow-x: hidden;
     }
 
-    /* === Falling Sand Animation Overlay === */
-    .sand-overlay {
+    
+    .sand-layer {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(#ff4a4a, #2f2f2f);
+      pointer-events: none;
       overflow: hidden;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeOut 2s ease-in-out 4s forwards;
+      z-index: 0;
     }
 
-    .sand-grain {
+    .sand-chunk {
       position: absolute;
-      width: 6px;
-      height: 6px;
-      background: #ffdf91;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #ffdf91 30%, #ffb347 90%);
       border-radius: 50%;
-      opacity: 0.8;
-      animation: fall 4s linear infinite;
+      opacity: 0.7;
+      filter: blur(2px);
+      animation: floatDown 6s linear infinite;
     }
 
-    @keyframes fall {
+    @keyframes floatDown {
       0% {
-        transform: translateY(-10px) scale(1);
+        transform: translateY(-10px) translateX(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(50vh) translateX(20px) scale(1.1);
         opacity: 1;
       }
       100% {
-        transform: translateY(100vh) scale(0.8);
-        opacity: 0;
+        transform: translateY(100vh) translateX(-20px) scale(0.9);
+        opacity: 0.6;
       }
     }
 
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    /* === Existing Styles === */
+   
     .nav-links {
       display: flex;
       align-items: center;
@@ -93,17 +87,19 @@
   </style>
 </head>
 <body>
-  <!-- === Falling Sand Animation Layer === -->
-  <div class="sand-overlay" id="sandOverlay"></div>
+  <!-- === Cottony Sand Background === -->
+  <div class="sand-layer" id="sandLayer"></div>
   <script>
-    const overlay = document.getElementById('sandOverlay');
-    for (let i = 0; i < 80; i++) {
-      const grain = document.createElement('div');
-      grain.classList.add('sand-grain');
-      grain.style.left = Math.random() * 100 + 'vw';
-      grain.style.animationDuration = 3 + Math.random() * 2 + 's';
-      grain.style.animationDelay = Math.random() * 2 + 's';
-      overlay.appendChild(grain);
+    const sandLayer = document.getElementById('sandLayer');
+    for (let i = 0; i < 50; i++) {
+      const chunk = document.createElement('div');
+      chunk.classList.add('sand-chunk');
+      chunk.style.left = Math.random() * 100 + 'vw';
+      chunk.style.width = 15 + Math.random() * 25 + 'px';
+      chunk.style.height = chunk.style.width;
+      chunk.style.animationDuration = 4 + Math.random() * 4 + 's';
+      chunk.style.animationDelay = Math.random() * 4 + 's';
+      sandLayer.appendChild(chunk);
     }
   </script>
 
@@ -190,4 +186,42 @@
       (FRC), allowing younger students to build foundational STEM
       and teamwork skills. Today, our FTC program includes four dynamic
       teams: HyperDroid #10015, Crazy Artificial Intelligence #16596,
-      Uncivi
+      Uncivilized Mecha Monkeys #23468, and Tech Titans #23684. Our FTC teams have earned numerous awards and
+      have qualified for World Championships multiple times.
+    </p>
+  </section>
+
+  <section id="fll">
+    <h3>FLL Teams</h3>
+    <p>
+      The Alberta Tech Alliance Association (ATAA) also supports three FIRST
+      LEGO League (FLL) teams for elementary school students: Fire Breathing
+      Rubber Duckies #13487, BOB Bots #58560, and The Creators #62273. FLL is
+      the most accessible of the FIRST robotics programs, using LEGO Spike
+      Prime robot kits on a tabletop field to introduce young students to the
+      fundamentals of engineering, problem-solving, and teamwork in a fun and
+      approachable way.
+    </p>
+    <p>
+      In the 2024 season, our FLL teams achieved outstanding success —
+      earning awards such as the Core Values Award, Coach of the Year, and
+      the Southern Alberta Inspire Award. Their hard work and creativity also
+      earned them spots at both the Southern Alberta Championships and the
+      Alberta Provincial Championships, showcasing the strength of our
+      youngest innovators.
+    </p>
+  </section>
+
+  <section class="call-to-action">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8-mhv2ub75MLiW2oJhK2cK-gVpVt0MC42PRDtC9tEMKDvPg/viewform?fbzx=-5483152079809542505&pli=1" target="_blank">Join Us</a>
+    <a href="https://www.paypal.com/paypalme/ataarobotics" target="_blank">Donate</a>
+    <a href="https://www.instagram.com/4421forge/" target="_blank">Instagram</a>
+  </section>
+</main>
+
+<footer id="contact">
+  <p>&copy; 2025 ATAA Robotics | info@ataarobotics.ca</p>
+  <p>Donations: payment@ataarobotics.ca</p>
+</footer>
+</body>
+</html>
