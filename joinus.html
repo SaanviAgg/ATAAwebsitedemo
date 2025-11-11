@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORGE 4421 – Join Us</title>
+  <link rel="stylesheet" href="ataaStyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    header .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .banner {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #ff4a4a;
+    }
+
+    nav.teams-bar {
+      background-color: #1f1f1f;
+      padding: 0.5rem 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #ff4a4a;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .dropdown-content a {
+      padding: 0.4rem 0.6rem;
+    }
+
+    main {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .join-intro {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .form-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .form-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff4a4a, #b30000);
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-family: 'Orbitron', sans-serif;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-link:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px #ff4a4a;
+    }
+
+    .commitment-section {
+      background-color: #1a1a1a;
+      border-left: 4px solid #ff4a4a;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 74, 74, 0.2);
+    }
+
+    .commitment-section h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #ff4a4a;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      color: #bbb;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <img src="robot pics/forge logo.png" alt="FORGE Logo" class="logo">
+      <div class="banner">FORGE 4421 – Join Us</div>
+    </div>
+    <nav class="teams-bar">
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="dropdown">
+          <a href="#frc">FRC - FORGE 4421</a>
+          <div class="dropdown-content">
+            <a href="team.html">About</a>
+            <a href="robots.html">Robots</a>
+            <a href="awards.html">Awards</a>
+            <a href="legacy.html">Legacy</a>
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#ftc">FTC Teams</a>
+          <div class="dropdown-content">
+            <a href="hyperdroid.html">HyperDroid #10015</a>
+            <a href="cai.html">Crazy AI #16596</a>
+            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
+            <a href="techtitans.html">Tech Titans #23684</a>
+          </div>
+        </div>
+        <a href="fll.html">FLL Teams</a>
+        <a href="event.html">Events</a>
+        <a href="impact.html">Impact</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+        <a href="joinus.html" class="active">Join Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="join-intro">
+      <h2 style="font-family: 'Orbitron', sans-serif; color: #ff4a4a;">Join the FORGE Family</h2>
+      <p>
+        Ready to take your passion for STEM, teamwork, and creativity to the next level?
+        Whether you’re new to robotics or have years of experience, FORGE 4421 welcomes dedicated students who are eager to learn, innovate, and make an impact.
+      </p>
+    </section>
+
+    <div class="form-links">
+      <a href="YOUR_GOOGLE_WAITLIST_FORM_LINK" target="_blank" class="form-link">📝 Waitlist Form</a>
+      <a href="YOUR_COMMITMENT_FORM_LINK" target="_blank" class="form-link">🤝 Commitment Form</a>
+    </div>
+
+    <section class="commitment-section">
+      <h3>Our Commitment to You</h3>
+      <p>
+        We’re committed to providing a supportive environment where every member can grow their skills, confidence, and leadership potential.
+        From hands-on technical training to outreach opportunities, you’ll gain real-world experience and become part of a close-knit, passionate team.
+      </p>
+      <p>
+        In return, we ask for dedication, respect, and a willingness to contribute to the team’s success — both on and off the field.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
+    <p>Payment Email for Donations: payment@ataarobotics.ca</p>
+  </footer>
+</body>
+</html>
 
