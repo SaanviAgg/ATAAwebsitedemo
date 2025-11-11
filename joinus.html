@@ -133,6 +133,26 @@
       margin-bottom: 1rem;
     }
 
+    .location-box {
+      margin: 3rem auto 0;
+      background: radial-gradient(circle at center, #3b3b3b 0%, #1a1a1a 100%);
+      border: 2px solid #ff4a4a;
+      color: #ff4a4a;
+      font-family: 'Orbitron', sans-serif;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 74, 74, 0.4);
+      max-width: 600px;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      animation: glowPulse 2.5s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px rgba(255, 74, 74, 0.3); transform: scale(1); }
+      100% { box-shadow: 0 0 25px rgba(255, 74, 74, 0.6); transform: scale(1.03); }
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -195,6 +215,10 @@
     <div class="form-links">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8-mhv2ub75MLiW2oJhK2cK-gVpVt0MC42PRDtC9tEMKDvPg/viewform?fbzx=-5483152079809542505&pli=1" target="_blank" class="form-link"> Waitlist Form</a>
       <a href="PUTLINKHERE" target="_blank" class="form-link"> Commitment Form</a>
+    </div>
+
+    <div class="location-box">
+      6061 90 Ave SE, Calgary, AB T2C 4Z6
     </div>
 
   </main>
