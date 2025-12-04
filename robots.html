@@ -48,6 +48,15 @@
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
     }
 
+    /* FIXED Z-INDEX ISSUE */
+    .robot-flip-front {
+      z-index: 1;
+    }
+
+    .robot-flip-back {
+      z-index: 2;
+    }
+
     .robot-flip-front {
       background: #000;
       display: flex;
@@ -89,7 +98,7 @@
       background-color: #1c1c1c;
       color: #fff;
       transform: rotateY(180deg);
-      padding: 20px;
+      padding: 10px 20px 20px 20px; /* FIXED TOP SPACE */
       font-size: 14px;
       display: flex;
       flex-direction: column;
@@ -99,7 +108,7 @@
       line-height: 1.5;
       flex-grow: 1;
       overflow-y: auto;
-      white-space: pre-wrap;
+      white-space: normal; /* FIXED BULLET ALIGNMENT */
       margin-bottom: 10px;
     }
 
@@ -339,7 +348,7 @@
               - Quality Award at Canpac.
               - Canpac Finalist.
               - Innovation in Control Award at Las Vegas.
-              - Top 10% robot worldwide by EPA, top 20 in Canada.
+              - Top 10 percent robot worldwide by EPA, top 20 in Canada.
               <strong>Fun Fact:</strong> Nicknamed "Big Willy" after a team member’s grandfather who donated generously. One of only two teams worldwide using REV linear actuators this year. Considered the best robot ATAA has made so far.
             </div>
             <div class="robot-links">
@@ -423,5 +432,3 @@
   </footer>
 </body>
 </html>
-
-
