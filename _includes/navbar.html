@@ -1,6 +1,10 @@
 <header>
   <div class="header-container">
+    {% if page.logo == "forge" %}
+    <img src="robot pics/forge logo.png" alt="ATAA Logo" class="logo">
+    {% else %}
     <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo">
+    {% endif %}
     <div class="banner">{{ page.title }}</div>
   </div>
 </header>

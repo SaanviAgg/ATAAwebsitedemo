@@ -1,216 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATAA – Documents</title>
-  <link rel="stylesheet" href="ataaStyles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #2f2f2f;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
+---
+layout: default
+title: Documents
+---
+<style>
+  body {
+    background-color: #2f2f2f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
 
-    header .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      flex-wrap: wrap;
-    }
+  header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
 
-    .logo {
-      height: 60px;
-    }
+  .logo {
+    height: 60px;
+  }
 
-    .banner {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
-      color: #ff4a4a;
-    }
+  .banner {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #ff4a4a;
+  }
 
-    nav.teams-bar {
-      background-color: #1f1f1f;
-      padding: 0.5rem 2rem;
-    }
+  main.documents-page {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-    }
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff4a4a;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
+  .document-card {
+    background-color: #1c1c1c;
+    border-radius: 18px;
+    padding: 2rem;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      background-color: #ff4a4a;
-    }
+  .document-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  }
 
-    .dropdown {
-      position: relative;
-    }
+  .document-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 16px;
+    background-color: #ff4a4a;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 180px;
-      z-index: 1;
-      flex-direction: column;
-      padding: 0.5rem;
-      border-radius: 6px;
-    }
+  .document-card a:hover {
+    background-color: #cc3a3a;
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
+  .documents-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+</style>
 
-    .dropdown-content a {
-      padding: 0.4rem 0.6rem;
-    }
 
-    main.documents-page {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
+<main class="documents-page">
+  <h2>ATAA Code of Conduct & Documents</h2>
+  <div class="documents-container">
 
-    h2 {
-      font-family: 'Orbitron', sans-serif;
-      color: #ff4a4a;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .document-card {
-      background-color: #1c1c1c;
-      border-radius: 18px;
-      padding: 2rem;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .document-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
-    }
-
-    .document-card a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 16px;
-      background-color: #ff4a4a;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .document-card a:hover {
-      background-color: #cc3a3a;
-    }
-
-    .documents-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1f1f1f;
-      color: #bbb;
-      margin-top: 3rem;
-    }
-  </style>
-</head>
-<body>
-    <header>
-    <div class="header-container">
-      <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo">
-      <div class="banner">FORGE 4421 – Contact Us</div>
-    </div>
-     <nav class="teams-bar">
-  <div class="nav-links">
-    <div class="dropdown">
-      <a href="index.html" class="dropbtn">Home</a>
-      <div class="dropdown-content">
-        <a href="Documents.html">Documents</a>
-      </div>
+    <div class="document-card">
+      <h3>Student Code of Conduct</h3>
+      <p>WRITE SOMETHING HERE?</p>
+      <a href="PUT FORM HERE" target="_blank">Download Form</a>
     </div>
 
-
-        <div class="dropdown">
-          <a href="#frc">FRC - FORGE 4421</a>
-          <div class="dropdown-content">
-            <a href="team.html">About</a>
-            <a href="robots.html">Robots</a>
-            <a href="awards.html">Awards</a>
-            <a href="legacy.html">Legacy</a>
-            <a href="media.html">Media</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#ftc">FTC Teams</a>
-          <div class="dropdown-content">
-            <a href="hyperdroid.html">HyperDroid #10015</a>
-            <a href="cai.html">Crazy AI #16596</a>
-            <a href="mechamonkeys.html">Mecha Monkeys #23468</a>
-            <a href="techtitans.html">Tech Titans #23684</a>
-          </div>
-        </div>
-
-        <a href="fll.html">FLL Teams</a>
-        <a href="event.html">Events</a>
-        <a href="impact.html">Impact</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html" class="active">Contact</a>
-        <a href="joinus.html">Join Us</a>
-      </div>
-    </nav>
-  </header>
-
-
-  <main class="documents-page">
-    <h2>ATAA Code of Conduct & Documents</h2>
-    <div class="documents-container">
-
-      <div class="document-card">
-        <h3>Student Code of Conduct</h3>
-        <p>WRITE SOMETHING HERE?</p>
-        <a href="PUT FORM HERE" target="_blank">Download Form</a>
-      </div>
-
-      <div class="document-card">
-        <h3>Parent Code of Conduct</h3>
-        <p>Parents are expected to support ATAA guidelines, encourage positive engagement, and maintain a respectful environment.</p>
-        <a href="PUT FORM HERE" target="_blank">Download Form</a>
-      </div>
+    <div class="document-card">
+      <h3>Parent Code of Conduct</h3>
+      <p>Parents are expected to support ATAA guidelines, encourage positive engagement, and maintain a respectful
+        environment.</p>
+      <a href="PUT FORM HERE" target="_blank">Download Form</a>
     </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Alberta Tech Alliance Association | info@ataarobotics.ca</p>
-    <p>Payment Email for Donations: payment@ataarobotics.ca</p>
-  </footer>
-</body>
-</html>
-
+  </div>
+</main>
