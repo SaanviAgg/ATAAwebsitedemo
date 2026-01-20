@@ -1,61 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ATAA Robotics</title>
-  <link rel="stylesheet" href="ataaStyles.css" />
-  <style>
-    body {
-      background-color: #2f2f2f;
-    }
+---
+title: Welcome to ATAA Robotics
+layout: default
+---
+<style>
+  body {
+    background-color: #2f2f2f;
+  }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .nav-links > a,
-    .nav-links > .dropdown > a {
-      white-space: nowrap;
-      padding: 0.3rem 0.6rem;
-      display: inline-block;
-    }
-    .dropdown-content {
-      min-width: 160px; 
-    }
+  .mission-vision {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    border: 1px solid #505050;
+  }
 
-    .mission-vision {
-      background-color: #3a3a3a;    
-      color: #ffffff;
-      padding: 2rem;                 
-      margin: 2rem 0;               
-      border-radius: 10px;           
-      box-shadow: 0 0 15px rgba(0,0,0,0.6); 
-      border: 1px solid #505050;     
-    }
+  .mission-vision h2 {
+    color: #ffffff;
+    margin-top: 0;
+  }
 
-    .mission-vision h2 {
-      color: #ffffff;
-      margin-top: 0;
-    }
-  </style>
-</head>
-<body>
-<header>
-  <div class="header-container">
-    <img src="logos/Ataalogo.png" alt="ATAA Logo" class="logo" />
-    <div class="banner">Welcome to ATAA Robotics</div>
-  </div>
-</header>
+  h2 {
+    margin-top: 0;
+  }
+</style>
 
-<div id="navbar"></div>
-<script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-    });
-</script>
 
 <main class="container">
   <section class="intro-video">
@@ -65,23 +36,30 @@
     </video>
   </section>
 
-  <div class="mission-vision">
+  <section>
     <h2>ATAA Mission & Vision</h2>
     <div class="about-section">
-      <p><strong>Mission Statement:</strong> Growing Alberta’s innovators of tomorrow through our competitive FIRST Robotics teams and giving back to our community by supporting expansion and sustainability of FIRST Robotics in Calgary and Alberta.</p>
+      <p><strong>Mission Statement:</strong> Growing Alberta’s innovators of tomorrow through our competitive FIRST
+        Robotics teams and giving back to our community by supporting expansion and sustainability of FIRST Robotics
+        in Calgary and Alberta.</p>
 
-      <p><strong>Vision:</strong> ATAA is on a mission to build a STEM community, forging a network of relationships between students, mentors, volunteers, sponsors, and all Calgary teams. We envision a future where Calgary, Alberta is recognized for STEM and robotics, weaving capability, teamwork, and innovation into the fabric of our inclusive community.</p>
+      <p><strong>Vision:</strong> ATAA is on a mission to build a STEM community, forging a network of relationships
+        between students, mentors, volunteers, sponsors, and all Calgary teams. We envision a future where Calgary,
+        Alberta is recognized for STEM and robotics, weaving capability, teamwork, and innovation into the fabric of
+        our inclusive community.</p>
 
       <p><strong>ATAA Goals:</strong></p>
       <div class="goals-list">
-        <p>Our goal is to be known for high performing teams that consistently qualify for finals at the competitions we attend while always striving to qualify for World Championships.</p>
-        <p>With the knowledge, experience and fundraising that we gain from these competitions, we will expand the reach of STEM by helping others start, run, and manage their FIRST Robotics teams.</p>
+        <p>Our goal is to be known for high performing teams that consistently qualify for finals at the competitions
+          we attend while always striving to qualify for World Championships.</p>
+        <p>With the knowledge, experience and fundraising that we gain from these competitions, we will expand the
+          reach of STEM by helping others start, run, and manage their FIRST Robotics teams.</p>
       </div>
     </div>
-  </div>
+  </section>
 
   <section id="frc">
-    <h3>FORGE 4421 - FRC</h3>
+    <h2>FORGE 4421 - FRC</h2>
     <p>
       At FORGE Robotics, FRC Team 4421, our students are driven by the core
       values of FIRST — innovation, teamwork, and a commitment to learning.
@@ -100,27 +78,27 @@
     </p>
     <p>
       Over the past few seasons, our hard work has paid off. In 2022
-      we were on the Winning Alliance at Canadian Pacific Regional 
-      and qualified for World Championships. In 2023, we ranked 
-      within the top 22% of FRC teams globally. By 2024, we climbed 
-      into the top 10% worldwide. That same year, we also rose from 
+      we were on the Winning Alliance at Canadian Pacific Regional
+      and qualified for World Championships. In 2023, we ranked
+      within the top 22% of FRC teams globally. By 2024, we climbed
+      into the top 10% worldwide. That same year, we also rose from
       the top 22% of Canadian teams to an impressive 11%, marking a
-      significant leap in our national performance. In 2025 we again 
-      qualified for World Championships through the new Regional 
-      Advancement System that rewarded our event performance and 
+      significant leap in our national performance. In 2025 we again
+      qualified for World Championships through the new Regional
+      Advancement System that rewarded our event performance and
       awards
     </p>
   </section>
 
   <section id="ftc">
-    <h3>FTC Teams</h3>
+    <h2>FTC Teams</h2>
     <p>
       In 2019, the Alberta Tech Alliance Association (ATAA) launched its
       first-ever FIRST Tech Challenge (FTC) teams, designed to engage
       students in grades 7 to 12. FTC offers a hands-on robotics experience
       using smaller robots on a 12-by-12-foot playing field, creating an
-      accessible and exciting introduction to competitive robotics. The program is stand alone 
-      or can serve as a stepping stone to FIRST Robotics Competition 
+      accessible and exciting introduction to competitive robotics. The program is stand alone
+      or can serve as a stepping stone to FIRST Robotics Competition
       (FRC), allowing younger students to build foundational STEM
       and teamwork skills. Today, our FTC program includes four dynamic
       teams: HyperDroid #10015, Crazy Artificial Intelligence #16596,
@@ -130,7 +108,7 @@
   </section>
 
   <section id="fll">
-    <h3>FLL Teams</h3>
+    <h2>FLL Teams</h2>
     <p>
       The Alberta Tech Alliance Association (ATAA) also supports three FIRST
       LEGO League (FLL) teams for elementary school students: Fire Breathing
@@ -156,10 +134,3 @@
     <a href="https://www.instagram.com/4421forge/" target="_blank">Instagram</a>
   </section>
 </main>
-
-<footer id="contact">
-  <p>&copy; 2025 ATAA Robotics | info@ataarobotics.ca</p>
-  <p>Donations: payment@ataarobotics.ca</p>
-</footer>
-</body>
-</html>
