@@ -51,7 +51,6 @@ logo: forge
     box-shadow: 0 0 10px #ff4a4a;
   }
 
-
   .press-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -76,8 +75,9 @@ logo: forge
     box-shadow: 0 14px 30px rgba(255, 74, 74, 0.7);
   }
 
+  /* CHANGED: link text is now white */
   .press-list a {
-    color: #ff4a4a;
+    color: #ffffff;
     font-weight: 700;
     font-size: 1.15rem;
     text-decoration: none;
@@ -87,7 +87,6 @@ logo: forge
   .press-list a:hover {
     text-decoration: underline;
   }
-
 
   .quote {
     max-width: 720px;
@@ -100,7 +99,6 @@ logo: forge
     text-shadow: 0 0 6px #b33951;
     user-select: none;
   }
-
 
   .instagram-section {
     max-width: 540px;
@@ -136,7 +134,6 @@ logo: forge
     text-decoration: underline;
   }
 
-
   .downloads-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -161,7 +158,6 @@ logo: forge
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Vertically center */
   }
 
   .downloads-list li:hover {
@@ -177,39 +173,7 @@ logo: forge
     width: 100%;
   }
 
-  header .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    height: 60px;
-  }
-
-  .banner {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
-    color: #ff4a4a;
-  }
-
   @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    nav.teams-bar {
-      overflow-x: auto;
-    }
-
-    nav.teams-bar .nav-links {
-      gap: 12px;
-    }
-
     main {
       margin: 2rem 1rem 3rem;
     }
@@ -228,6 +192,7 @@ logo: forge
     }
   }
 </style>
+
 <main>
   <section class="instagram-section" aria-label="Instagram feed">
     <h2>Instagram Feed</h2>
@@ -235,71 +200,29 @@ logo: forge
       data-instgrm-version="14"
       style="background:#FFF; border:none; margin:1rem auto; max-width:540px; padding:0; width:99%;"></blockquote>
     <script async src="//www.instagram.com/embed.js"></script>
-    <p>Follow us on <a href="https://www.instagram.com/4421FORGE/" target="_blank" rel="noopener noreferrer"
-        tabindex="0">@4421FORGE</a></p>
+    <p>Follow us on <a href="https://www.instagram.com/4421FORGE/" target="_blank" rel="noopener noreferrer">@4421FORGE</a></p>
   </section>
 
   <section class="press-section">
     <h2 class="section-title">Press &amp; News</h2>
     <ul class="press-list">
-      <li>
-        <a href="https://youtu.be/RvN2nVQNOXI?feature=shared" target="_blank" rel="noopener noreferrer" tabindex="0">
-          FORGE Robotics Featured on Local News
-        </a>
-      </li>
-      <li>
-        <a href="https://youtu.be/27_cYP2wV9Q?si=NKq4W5IZ5nypBX0g" target="_blank" rel="noopener noreferrer"
-          tabindex="0">
-          2025 FIRST Champs FRC Sizzle Video
-        </a>
-      </li>
-      <li>
-        <a href="https://youtu.be/UkN9NHDlqx8?si=4tue_elK2HH6zUM0" target="_blank" rel="noopener noreferrer"
-          tabindex="0">
-          2025 FIRST Champs Sponsor Highlight Video
-        </a>
-      </li>
-      <li>
-        <a href="https://youtu.be/KOzJsE8XorQ?si=iERWp16i4QC_9QHs" target="_blank" rel="noopener noreferrer"
-          tabindex="0">
-          Vegas Match Video
-        </a>
-      </li>
-      <li>
-        <a href="https://youtu.be/PteQ19sB778?si=VAtM1dJnm0xMv9BJ" target="_blank" rel="noopener noreferrer"
-          tabindex="0">
-          Champs Match Video
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/watch?v=ILo6bY-9bAI" target="_blank" rel="noopener noreferrer" tabindex="0">
-          Our YouTube Channel – CanPac 2022
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/watch?v=pXpfVwNjV7Q" target="_blank" rel="noopener noreferrer" tabindex="0">
-          Behind the Bumpers Vegas 2023
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/watch?v=QV_zYhCjaOc" target="_blank" rel="noopener noreferrer" tabindex="0">
-          Behind the Bumpers Vegas 2024
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/shorts/oUMNkOIDmI0" target="_blank" rel="noopener noreferrer" tabindex="0">
-          Pit Stop Vegas 2025
-        </a>
-      </li>
+      <li><a href="https://youtu.be/RvN2nVQNOXI?feature=shared" target="_blank">FORGE Robotics Featured on Local News</a></li>
+      <li><a href="https://youtu.be/27_cYP2wV9Q?si=NKq4W5IZ5nypBX0g" target="_blank">2025 FIRST Champs FRC Sizzle Video</a></li>
+      <li><a href="https://youtu.be/UkN9NHDlqx8?si=4tue_elK2HH6zUM0" target="_blank">2025 FIRST Champs Sponsor Highlight Video</a></li>
+      <li><a href="https://youtu.be/KOzJsE8XorQ?si=iERWp16i4QC_9QHs" target="_blank">Vegas Match Video</a></li>
+      <li><a href="https://youtu.be/PteQ19sB778?si=VAtM1dJnm0xMv9BJ" target="_blank">Champs Match Video</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ILo6bY-9bAI" target="_blank">Our YouTube Channel – CanPac 2022</a></li>
+      <li><a href="https://www.youtube.com/watch?v=pXpfVwNjV7Q" target="_blank">Behind the Bumpers Vegas 2023</a></li>
+      <li><a href="https://www.youtube.com/watch?v=QV_zYhCjaOc" target="_blank">Behind the Bumpers Vegas 2024</a></li>
+      <li><a href="https://www.youtube.com/shorts/oUMNkOIDmI0" target="_blank">Pit Stop Vegas 2025</a></li>
     </ul>
   </section>
 
-  <section class="downloads-section" aria-label="Downloads and media kit">
+  <section class="downloads-section">
     <h2 class="section-title">Downloads &amp; Media Kit</h2>
     <ul class="downloads-list">
-      <li><a href="/assets/media/ATAA_Sponsorship_Package.pdf" target="_blank" download tabindex="0">Sponsorship Package
-          (PDF)</a></li>
-      <li><a href="robot pics/FORGE logo.png" target="_blank" download tabindex="0">Team Logos (ZIP)</a></li>
+      <li><a href="/assets/media/ATAA_Sponsorship_Package.pdf" target="_blank" download>Sponsorship Package (PDF)</a></li>
+      <li><a href="robot pics/FORGE logo.png" target="_blank" download>Team Logos (ZIP)</a></li>
     </ul>
   </section>
 </main>
